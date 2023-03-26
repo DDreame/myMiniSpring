@@ -4,18 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/BeanDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ClassPathXmlApplicationContent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/myBean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="[Spring Learning] Frist commit About DI.">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/ClassPathXmlResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/SimpleBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/exception/BeanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/AService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/AServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,18 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.minis.test.Test1" />
@@ -83,6 +89,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="" />
@@ -91,11 +100,27 @@
       <option name="presentableId" value="Default" />
       <updated>1679330503786</updated>
       <workItem from="1679330504967" duration="873000" />
-      <workItem from="1679808046006" duration="1127000" />
+      <workItem from="1679808046006" duration="5363000" />
     </task>
+    <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
+      <created>1679809591698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679809591698</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Spring Learning] Frist commit About DI." />
+    <option name="LAST_COMMIT_MESSAGE" value="[Spring Learning] Frist commit About DI." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,9 +1,9 @@
-package com.minis;
+package com.minis.beans;
 
 /***
  * @description  : Todo
- * @author : 梦某人
- * @date : 2023/3/21 00:43
+ * @author : DDDreame
+ * {@code @date} : 2023/3/21 00:43
  */
 public class BeanDefinition {
     private String id;

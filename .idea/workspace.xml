@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="构建 BeanFactory，解藕了类 ClassPathXmlApplicationContent，将Bean管理部分托管到 BeanFactory。解藕 Resource 数据读取部分。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/DefaultSingletonBeanRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/SingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/SimpleBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/SimpleBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/XmlBeanDefinitionReader.java" afterDir="false" />
-    </list>
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679330503786</updated>
       <workItem from="1679330504967" duration="873000" />
-      <workItem from="1679808046006" duration="7624000" />
+      <workItem from="1679808046006" duration="8006000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -108,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679813840654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现">
+      <created>1679929375085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679929375085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +116,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[Spring Learning] Frist commit About DI." />
     <MESSAGE value="构建 BeanFactory，解藕了类 ClassPathXmlApplicationContent，将Bean管理部分托管到 BeanFactory。解藕 Resource 数据读取部分。" />
-    <option name="LAST_COMMIT_MESSAGE" value="构建 BeanFactory，解藕了类 ClassPathXmlApplicationContent，将Bean管理部分托管到 BeanFactory。解藕 Resource 数据读取部分。" />
+    <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

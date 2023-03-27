@@ -1,4 +1,4 @@
-package com.minis.core;
+package com.minis.beans;
 
 import com.minis.beans.BeanDefinition;
 import com.minis.beans.BeanFactory;
@@ -11,9 +11,9 @@ import org.dom4j.Element;
  * @date : 2023/3/26 14:39 
  */
 public class XmlBeanDefinitionReader {
-    BeanFactory beanFactory;
+    SimpleBeanFactory beanFactory;
 
-    public XmlBeanDefinitionReader(BeanFactory beanFactory){
+    public XmlBeanDefinitionReader(SimpleBeanFactory beanFactory){
         this.beanFactory = beanFactory;
     }
 

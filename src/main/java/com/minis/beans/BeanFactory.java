@@ -18,6 +18,12 @@ public interface BeanFactory {
     Object getBean(String beanName) throws BeanException;
 
     /**
+     *
+     * @param beanName
+     * @return
+     */
+    Boolean containsBean(String beanName);
+    /**
      * 向 BeanFactory 内定义一个 Bean
      * @param beanDefinition
      */

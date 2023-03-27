@@ -4,7 +4,7 @@ import com.minis.beans.*;
 import com.minis.core.ClassPathXmlResource;
 import com.minis.core.Resource;
 import com.minis.beans.SimpleBeanFactory;
-import com.minis.core.XmlBeanDefinitionReader;
+import com.minis.beans.XmlBeanDefinitionReader;
 import com.minis.exception.BeanException;
 
 /***
@@ -18,7 +18,7 @@ public class ClassPathXmlApplicationContent {
 
     public ClassPathXmlApplicationContent(String fileName){
         Resource resource = new ClassPathXmlResource(fileName);
-        BeanFactory beanFactory = new SimpleBeanFactory();
+        SimpleBeanFactory beanFactory = new SimpleBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinition(resource);
         this.beanFactory = beanFactory;
@@ -27,7 +27,11 @@ public class ClassPathXmlApplicationContent {
 
 
     public Object getBean(String beanName) throws BeanException {
-        return beanFactory.getBean(beanName);
+        return this.beanFactory.getBean(beanName);
+    }
+
+    public Boolean containsBean(String beanName){
+        return this.beanFactory.containsBean(beanName);
     }
 
     public void registerBeanDefinition(BeanDefinition beanDefinition){

@@ -11,10 +11,17 @@ public class PropertyValue {
     private final String name;
     private final Object value;
 
-    public PropertyValue(String type, String name,Object value){
+    private final boolean isRef;
+
+    public boolean isRef() {
+        return isRef;
+    }
+
+    public PropertyValue(String type, String name, Object value, boolean isRef){
         this.type = type;
         this.value = value;
         this.name = name;
+        this.isRef = isRef;
     }
 
     public String getType() {

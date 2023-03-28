@@ -30,11 +30,22 @@ public class XmlBeanDefinitionReader {
             //处理属性
             List<Element> pvEle = element.elements("property");
             PropertyValues pvs = new PropertyValues();
+            List<String> refs = new ArrayList<>();
             for(Element e: pvEle){
                 String type = e.attributeValue("type");
                 String name = e.attributeValue("name");
                 String value = e.attributeValue("value");
-                pvs.addPropertyValue(new PropertyValue(type, name, value));
+                String ref = e.attributeValue("ref");
+                boolean isRef = false;
+                String pV = "";
+                if(value != null && !"".equals(value)){
+                    pV = value;
+                } else if (ref != null && !"".equals(ref)) {
+                    isRef = true;
+                    pV = ref;
+                    refs.add(ref);
+                }
+                pvs.addPropertyValue(new PropertyValue(type, name, pV,isRef));
             }
             beanDefinition.setPropertyValues(pvs);
 
@@ -48,6 +59,9 @@ public class XmlBeanDefinitionReader {
                 avs.addGenericArgumentValue(new ArgumentValue(value, type, name));
             }
             beanDefinition.setArgumentValues(avs);
+
+            String[] refAry = refs.toArray(new String[0]);
+            beanDefinition.setDependsOn(refAry);
 
             this.beanFactory.registerBeanDefinition(beanDefinition);
 

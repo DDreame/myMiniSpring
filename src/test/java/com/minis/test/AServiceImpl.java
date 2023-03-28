@@ -15,6 +15,18 @@ public class AServiceImpl implements AService{
 
     private int property2;
 
+    public BaseBaseService getBaseBaseService() {
+        return baseBaseService;
+    }
+
+    public void setBaseBaseService(BaseBaseService baseBaseService) {
+        this.baseBaseService = baseBaseService;
+
+        System.out.println("I get Base Base service and it's name is " + baseBaseService.name );
+    }
+
+    private BaseBaseService baseBaseService;
+
     public AServiceImpl(String name, Integer level){
         this.name = name;
         this.level = level;

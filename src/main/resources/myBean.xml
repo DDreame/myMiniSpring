@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans>
+    <!--
+    循环依赖
+      -->
+    <bean id="baseservice" class="com.minis.test.BaseService">
+        <constructor-arg type="String" name="name" value="baseservice"/>
+        <property type="com.minis.test.AServiceImpl" name="aservice" ref="aservice" />
+    </bean>
+    <bean id="basebaseservice" class="com.minis.test.BaseBaseService">
+        <constructor-arg type="String" name="name" value="basebaseservice"/>
+        <property type="com.minis.test.BaseService" name="baseService" ref="baseservice" />
+    </bean>
     <bean id="aservice" class="com.minis.test.AServiceImpl">
         <property type="String" name="property1" value="Hello Word!"/>
         <property type="Integer" name="property2" value="100"/>
-        <constructor-arg type="String" name="name" value="Name"/>
+        <constructor-arg type="String" name="name" value="AService A"/>
         <constructor-arg type="Integer" name="level" value="3"/>
+        <property type="com.minis.test.BaseBaseService" name="baseBaseService" ref="basebaseservice"/>
     </bean>
     <bean id="aservice2" class="com.minis.test.AServiceImpl">
         <property type="String" name="property1" value="Hello~Word!"/>

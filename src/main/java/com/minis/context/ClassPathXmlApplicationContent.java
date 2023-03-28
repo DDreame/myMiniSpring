@@ -12,16 +12,25 @@ import com.minis.exception.BeanException;
  * @author : DDDreame
  * @date : 2023/3/21 00:46 
  */
-public class ClassPathXmlApplicationContent implements BeanFactory{
+public class ClassPathXmlApplicationContent implements BeanFactory {
 
-    BeanFactory beanFactory;
+    SimpleBeanFactory beanFactory;
+
 
     public ClassPathXmlApplicationContent(String fileName){
+        this(fileName, true);
+    }
+
+
+    public ClassPathXmlApplicationContent(String fileName, boolean isRefresh){
         Resource resource = new ClassPathXmlResource(fileName);
         SimpleBeanFactory beanFactory = new SimpleBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinition(resource);
         this.beanFactory = beanFactory;
+        if (!isRefresh) {
+            this.beanFactory.refresh();
+        }
     }
 
 

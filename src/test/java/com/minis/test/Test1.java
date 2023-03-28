@@ -16,5 +16,10 @@ public class Test1 {
         aService.SayHello();
         AService aService2 = (AService) content.getBean("aservice2");
         aService2.SayHello();
+
+        //依赖注入
+        System.out.println("开始测试依赖注入！");
+        BaseBaseService baseService = (BaseBaseService) content.getBean("basebaseservice");
+        baseService.sayHello();
     }
 }

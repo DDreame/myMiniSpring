@@ -5,7 +5,7 @@
       -->
     <bean id="baseservice" class="com.minis.test.BaseService">
         <constructor-arg type="String" name="name" value="baseservice"/>
-        <property type="com.minis.test.AServiceImpl" name="aservice" ref="aservice" />
+<!--        <property type="com.minis.test.AServiceImpl" name="aservice" ref="aservice" />-->
     </bean>
     <bean id="basebaseservice" class="com.minis.test.BaseBaseService">
         <constructor-arg type="String" name="name" value="basebaseservice"/>

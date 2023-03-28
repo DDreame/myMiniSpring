@@ -1,7 +1,7 @@
-package com.minis.beans;
+package com.minis.beans.factory.BeanReader;
 
-import com.minis.beans.BeanDefinition;
-import com.minis.beans.BeanFactory;
+import com.minis.beans.factory.AbstractFactory;
+import com.minis.beans.factory.config.*;
 import com.minis.core.Resource;
 import org.dom4j.Element;
 
@@ -14,9 +14,9 @@ import java.util.List;
  * @date : 2023/3/26 14:39 
  */
 public class XmlBeanDefinitionReader {
-    SimpleBeanFactory beanFactory;
+    AbstractFactory beanFactory;
 
-    public XmlBeanDefinitionReader(SimpleBeanFactory beanFactory){
+    public XmlBeanDefinitionReader(AbstractFactory beanFactory){
         this.beanFactory = beanFactory;
     }
 

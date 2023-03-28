@@ -1,10 +1,13 @@
-package com.minis.beans;
+package com.minis.beans.factory;
 
-import com.minis.beans.BeanDefinition;
 import com.minis.beans.BeanFactory;
+import com.minis.beans.factory.config.*;
+import com.minis.beans.factory.support.BeanDefinitionRegistry;
+import com.minis.beans.factory.support.DefaultSingletonBeanRegistry;
 import com.minis.exception.BeanException;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,18 +15,24 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /***
- * @description : 简单的 Bean 工厂实现
+ * @description : Todo
  * @author : DDDreame
- * @date : 2023/3/26 14:43 
+ * @date : 2023/3/28 23:32 
  */
-public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory, BeanDefinitionRegistry{
-
-    public SimpleBeanFactory(){
-
-    }
+public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
+        implements BeanFactory, BeanDefinitionRegistry {
 
     public Map<String, BeanDefinition> beanDefinitions = new ConcurrentHashMap<>(256);
     private List<String> beanDefinitionNames = new ArrayList<>();
+
+    public void refresh() {
+        for (String beanName : beanDefinitionNames) {
+            try { getBean(beanName);
+            } catch (BeanException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 
     @Override
     public Object getBean(String beanName) throws BeanException {
@@ -43,14 +52,34 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
                 this.registerSingleton(beanName,singleton);
                 // 预留beanpostprocessor位置
                 // step 1: postProcessBeforeInitialization
+                applyBeanPostProcessorBeforeInitialization(singleton, beanName);
                 // step 2: afterPropertiesSet
                 // step 3: init-method
+                if (beanDefinition.getInitMethodName() != null && !"".equals(beanDefinition.getInitMethodName())) {
+                    invokeInitMethod(beanDefinition, singleton);
+                }
                 // step 4: postProcessAfterInitialization
+                applyBeanPostProcessorAfterInitialization(singleton, beanName);
             }
 
 
         }
         return singleton;
+    }
+
+    private void invokeInitMethod(BeanDefinition beanDefinition, Object obj){
+        Class<?> clazz = beanDefinition.getClass();
+        Method method = null;
+        try{
+            method = clazz.getMethod(beanDefinition.getClassName());
+        } catch (NoSuchMethodException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            method.invoke(obj);
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private Object createBean(BeanDefinition beanDefinition){
@@ -162,17 +191,6 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
         }
     }
 
-
-    public void refresh() {
-        for (String beanName : beanDefinitionNames) {
-            try {
-                getBean(beanName);
-            } catch (BeanException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-
     @Override
     public Boolean containsBean(String beanName) {
         return beanDefinitions.containsKey(beanName);
@@ -198,7 +216,6 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
     public Class<?> getType(String name) {
         return this.beanDefinitions.get(name).getClass();
     }
-
 
     @Override
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) {
@@ -229,4 +246,8 @@ public class SimpleBeanFactory extends DefaultSingletonBeanRegistry implements B
     public boolean containsBeanDefinition(String name) {
         return this.beanDefinitions.containsKey(name);
     }
+
+    abstract public Object applyBeanPostProcessorBeforeInitialization(Object existingBean, String beanName) throws BeanException;
+
+    abstract public Object applyBeanPostProcessorAfterInitialization(Object existingBean, String beanName) throws  BeanException;
 }

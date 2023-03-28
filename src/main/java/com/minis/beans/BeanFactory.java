@@ -1,5 +1,6 @@
 package com.minis.beans;
 
+import com.minis.beans.factory.config.BeanDefinition;
 import com.minis.exception.BeanException;
 
 /***

@@ -14,5 +14,7 @@ public class Test1 {
         ClassPathXmlApplicationContent content = new ClassPathXmlApplicationContent("myBean.xml");
         AService aService = (AService) content.getBean("aservice");
         aService.SayHello();
+        AService aService2 = (AService) content.getBean("aservice2");
+        aService2.SayHello();
     }
 }

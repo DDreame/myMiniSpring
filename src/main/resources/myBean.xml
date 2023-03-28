@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans>
-    <bean id="aservice" class="com.minis.test.AServiceImpl"/>
+    <bean id="aservice" class="com.minis.test.AServiceImpl">
+        <property type="String" name="property1" value="Hello Word!"/>
+        <property type="Integer" name="property2" value="100"/>
+        <constructor-arg type="String" name="name" value="Name"/>
+        <constructor-arg type="Integer" name="level" value="3"/>
+    </bean>
+    <bean id="aservice2" class="com.minis.test.AServiceImpl">
+        <property type="String" name="property1" value="Hello~Word!"/>
+        <property type="Integer" name="property2" value="101"/>
+        <constructor-arg type="String" name="name" value="Test2"/>
+        <constructor-arg type="Integer" name="level" value="133"/>
+    </bean>
 </beans>

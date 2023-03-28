@@ -12,7 +12,7 @@ import com.minis.exception.BeanException;
  * @author : DDDreame
  * @date : 2023/3/21 00:46 
  */
-public class ClassPathXmlApplicationContent {
+public class ClassPathXmlApplicationContent implements BeanFactory{
 
     BeanFactory beanFactory;
 
@@ -36,6 +36,21 @@ public class ClassPathXmlApplicationContent {
 
     public void registerBeanDefinition(BeanDefinition beanDefinition){
         this.beanFactory.registerBeanDefinition(beanDefinition);
+    }
+
+    @Override
+    public boolean isSingleton(String beanName) {
+        return this.beanFactory.isSingleton(beanName);
+    }
+
+    @Override
+    public boolean isPrototype(String beanName) {
+        return this.beanFactory.isPrototype(beanName);
+    }
+
+    @Override
+    public Class<?> getType(String name) {
+        return this.beanFactory.getType(name);
     }
 
 

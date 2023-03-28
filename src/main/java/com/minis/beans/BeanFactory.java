@@ -28,4 +28,27 @@ public interface BeanFactory {
      * @param beanDefinition
      */
     void registerBeanDefinition(BeanDefinition beanDefinition);
+
+    /**
+     * 是否单例 Bean
+     * @param beanName
+     * @return
+     */
+    boolean isSingleton(String beanName);
+
+    /**
+     *
+     * @param beanName
+     * @return
+     */
+    boolean isPrototype(String beanName);
+
+    /**
+     *
+     * @param name
+     * @return
+     */
+
+    Class<?> getType(String name);
+
 }

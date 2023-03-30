@@ -1,12 +1,12 @@
 package com.minis.context;
 
 import com.minis.beans.BeanFactory;
-import com.minis.beans.factory.AutowireCapableBeanFactory;
+import com.minis.beans.factory.DefaultListableBeanFactory;
 import com.minis.beans.factory.config.BeanDefinition;
-import com.minis.beans.factory.support.AutowiredAnnotationBeanPostProcessor;
+import com.minis.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
+import com.minis.beans.factory.support.BeanPostProcessor;
 import com.minis.core.ClassPathXmlResource;
 import com.minis.core.Resource;
-import com.minis.beans.factory.SimpleBeanFactory;
 import com.minis.beans.factory.BeanReader.XmlBeanDefinitionReader;
 import com.minis.exception.BeanException;
 
@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class ClassPathXmlApplicationContent implements BeanFactory {
 
-    AutowireCapableBeanFactory beanFactory;
+    DefaultListableBeanFactory beanFactory;
 
 
     public ClassPathXmlApplicationContent(String fileName){
@@ -29,7 +29,7 @@ public class ClassPathXmlApplicationContent implements BeanFactory {
 
     public ClassPathXmlApplicationContent(String fileName, boolean isRefresh){
         Resource resource = new ClassPathXmlResource(fileName);
-        AutowireCapableBeanFactory beanFactory = new AutowireCapableBeanFactory();
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
         reader.loadBeanDefinition(resource);
         this.beanFactory = beanFactory;
@@ -41,19 +41,20 @@ public class ClassPathXmlApplicationContent implements BeanFactory {
             }
         }
     }
-    public List<AutowiredAnnotationBeanPostProcessor> getBeanFactoryPostProcessors() {
+    public List<BeanPostProcessor> getBeanFactoryPostProcessors() {
         return this.beanFactory.getProcessorList();
     }
 
     public void refresh() throws BeanException, IllegalStateException {
         // 注册处理器.
+        System.out.println("refresh");
         registerBeanPostProcessors(this.beanFactory);
         onRefresh();
     }
 
 
-    private void registerBeanPostProcessors(AutowireCapableBeanFactory beanFactory) {
-        beanFactory.addBeanPostProcessor(new AutowiredAnnotationBeanPostProcessor());
+    private void registerBeanPostProcessors(DefaultListableBeanFactory beanFactory) {
+        beanFactory.addBeanPostProcessor(new AutowiredAnnotationBeanPostProcessor(this.beanFactory));
     }
 
     private void onRefresh() {

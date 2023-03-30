@@ -1,7 +1,8 @@
-package com.minis.beans.factory.support;
+package com.minis.beans.factory.annotation;
 
-import com.minis.beans.factory.AutowireCapableBeanFactory;
-import com.minis.beans.factory.annotation.Autowired;
+import com.minis.beans.BeanFactory;
+import com.minis.beans.factory.DefaultListableBeanFactory;
+import com.minis.beans.factory.support.BeanPostProcessor;
 import com.minis.exception.BeanException;
 
 import java.lang.reflect.Field;
@@ -11,9 +12,13 @@ import java.lang.reflect.Field;
  * @author : DDDreame
  * @date : 2023/3/28 23:29 
  */
-public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor{
+public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor {
 
-    private AutowireCapableBeanFactory beanFactory;
+    private BeanFactory beanFactory;
+
+    public AutowiredAnnotationBeanPostProcessor(BeanFactory beanFactory){
+        this.beanFactory = beanFactory;
+    }
 
     @Override
     public Object postProcessorBeforeInitialization(Object bean, String beanName) throws BeanException {
@@ -22,7 +27,6 @@ public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor{
         Class<?> clazz = bean.getClass();
 
         Field[] fields = clazz.getDeclaredFields();
-
         for(Field field: fields){
             boolean isAutowired = field.isAnnotationPresent(Autowired.class);
             if(isAutowired){
@@ -43,10 +47,10 @@ public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor{
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeanException {
         return bean;
     }
-    public AutowireCapableBeanFactory getBeanFactory() {
+    public BeanFactory getBeanFactory() {
         return beanFactory;
     }
-    public void setBeanFactory(AutowireCapableBeanFactory beanFactory) {
+    public void setBeanFactory(BeanFactory beanFactory) {
         this.beanFactory = beanFactory;
     }
 

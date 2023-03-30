@@ -1,6 +1,6 @@
 package com.minis.beans.factory.BeanReader;
 
-import com.minis.beans.factory.AbstractFactory;
+import com.minis.beans.factory.support.AbstractFactory;
 import com.minis.beans.factory.config.*;
 import com.minis.core.Resource;
 import org.dom4j.Element;

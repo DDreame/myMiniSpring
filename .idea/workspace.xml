@@ -4,29 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(com.minis.beans):修改 BeanFactory，支持循环依赖注入。&#10;&#10;修改注入方式为两级缓存，使用 earlySingleton 构建初期实例，修改相应  Test 测试循环依赖是否支持。">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/AbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/AutowireCapableBeanFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/Autowired.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanPostProcessor.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="doc(readme):添加 ReadMe 文件。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/core/env/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/core/env/EnvironmentCapable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/core/env/PropertyResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/ArgumentValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/ArgumentValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanDefinitionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/DefaultSingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/SimpleBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/SimpleBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/SingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/SingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/BeanReader/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/BeanReader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/BeanReader/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/SimpleBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/SimpleBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/SingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/SingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AutowiredAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultSingletonBeanRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/myBean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -114,7 +109,7 @@
       <workItem from="1679931153320" duration="2444000" />
       <workItem from="1679984560049" duration="9391000" />
       <workItem from="1679996717671" duration="8750000" />
-      <workItem from="1680019033349" duration="2759000" />
+      <workItem from="1680019033349" duration="9475000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -158,7 +153,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680016109356</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feature(com.minis.beans):修改 BeanFactory，支持注解@Atuowired。&#10;&#10;实现 @Autowired 注解">
+      <created>1680021926880</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680021926880</updated>
+    </task>
+    <task id="LOCAL-00008" summary="doc(readme):添加 ReadMe 文件。">
+      <created>1680022067602</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680022067602</updated>
+    </task>
+    <task id="LOCAL-00009" summary="doc(readme):添加 ReadMe 文件。">
+      <created>1680022070941</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680022070941</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +205,9 @@
     <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现" />
     <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持注入。&#10;&#10;支持构造器注入和 set 参数注入" />
     <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持循环依赖注入。&#10;&#10;修改注入方式为两级缓存，使用 earlySingleton 构建初期实例，修改相应  Test 测试循环依赖是否支持。" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(com.minis.beans):修改 BeanFactory，支持循环依赖注入。&#10;&#10;修改注入方式为两级缓存，使用 earlySingleton 构建初期实例，修改相应  Test 测试循环依赖是否支持。" />
+    <MESSAGE value="feature(com.minis.beans):修改 BeanFactory，支持注解@Atuowired。&#10;&#10;实现 @Autowired 注解" />
+    <MESSAGE value="doc(readme):添加 ReadMe 文件。" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(readme):添加 ReadMe 文件。" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

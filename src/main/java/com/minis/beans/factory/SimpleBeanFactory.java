@@ -1,5 +1,8 @@
 package com.minis.beans.factory;
 
+import com.minis.beans.BeanFactory;
+import com.minis.beans.factory.support.AbstractFactory;
+import com.minis.beans.factory.support.BeanDefinitionRegistry;
 import com.minis.exception.BeanException;
 
 /***
@@ -7,7 +10,7 @@ import com.minis.exception.BeanException;
  * @author : DDDreame
  * @date : 2023/3/26 14:43 
  */
-public class SimpleBeanFactory extends AbstractFactory {
+public class SimpleBeanFactory extends DefaultListableBeanFactory {
 
     public SimpleBeanFactory(){
 
@@ -15,12 +18,12 @@ public class SimpleBeanFactory extends AbstractFactory {
 
 
     @Override
-    public Object applyBeanPostProcessorBeforeInitialization(Object existingBean, String beanName) throws BeanException {
+    public Object applyBeanPostProcessorsBeforeInitialization(Object existingBean, String beanName) throws BeanException {
         return null;
     }
 
     @Override
-    public Object applyBeanPostProcessorAfterInitialization(Object existingBean, String beanName) throws BeanException {
+    public Object applyBeanPostProcessorsAfterInitialization(Object existingBean, String beanName) throws BeanException {
         return null;
     }
 }

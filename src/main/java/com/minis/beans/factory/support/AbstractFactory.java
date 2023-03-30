@@ -1,9 +1,9 @@
-package com.minis.beans.factory;
+package com.minis.beans.factory.support;
 
 import com.minis.beans.BeanFactory;
+import com.minis.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import com.minis.beans.factory.config.*;
-import com.minis.beans.factory.support.BeanDefinitionRegistry;
-import com.minis.beans.factory.support.DefaultSingletonBeanRegistry;
+import com.minis.beans.factory.DefaultSingletonBeanRegistry;
 import com.minis.exception.BeanException;
 
 import java.lang.reflect.Constructor;
@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date : 2023/3/28 23:32 
  */
 public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
-        implements BeanFactory, BeanDefinitionRegistry {
+        implements ConfigurableBeanFactory, BeanDefinitionRegistry {
 
     public Map<String, BeanDefinition> beanDefinitions = new ConcurrentHashMap<>(256);
     private List<String> beanDefinitionNames = new ArrayList<>();
@@ -52,14 +52,14 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
                 this.registerSingleton(beanName,singleton);
                 // 预留beanpostprocessor位置
                 // step 1: postProcessBeforeInitialization
-                applyBeanPostProcessorBeforeInitialization(singleton, beanName);
+                applyBeanPostProcessorsBeforeInitialization(singleton, beanName);
                 // step 2: afterPropertiesSet
                 // step 3: init-method
                 if (beanDefinition.getInitMethodName() != null && !"".equals(beanDefinition.getInitMethodName())) {
                     invokeInitMethod(beanDefinition, singleton);
                 }
                 // step 4: postProcessAfterInitialization
-                applyBeanPostProcessorAfterInitialization(singleton, beanName);
+                applyBeanPostProcessorsAfterInitialization(singleton, beanName);
             }
 
 
@@ -247,7 +247,7 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
         return this.beanDefinitions.containsKey(name);
     }
 
-    abstract public Object applyBeanPostProcessorBeforeInitialization(Object existingBean, String beanName) throws BeanException;
+    abstract public Object applyBeanPostProcessorsBeforeInitialization(Object existingBean, String beanName) throws BeanException;
 
-    abstract public Object applyBeanPostProcessorAfterInitialization(Object existingBean, String beanName) throws  BeanException;
+    abstract public Object applyBeanPostProcessorsAfterInitialization(Object existingBean, String beanName) throws  BeanException;
 }

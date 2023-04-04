@@ -1,6 +1,6 @@
 package com.minis.test;
 
-import com.minis.beans.factory.annotation.Autowired;
+import com.minis.ioc.beans.factory.annotation.Autowired;
 
 /***
  * @description : Todo

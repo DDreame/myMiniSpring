@@ -25,7 +25,6 @@ public class BaseBaseService {
 
     public void setBaseService(BaseService baseService) {
         this.baseService = baseService;
-
         System.out.println("I get Base service and it's name is " + baseService.name );
     }
 }

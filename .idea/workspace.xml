@@ -1,21 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="myMiniSpring:jar" />
+      <artifact name="myMiniSpring:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(minis.bean): 修改 IOC 工厂，增强扩展性">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanFactoryPostProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/AbstractApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/ApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/event/ContextRefreshEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/event/SimpleApplicationEventPublisher.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(minis.bean): 修改 IOC 工厂，增加事件推送">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myMiniSpring.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/HelloWorldBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/ClassPathXmlResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/MappingValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/XmlConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/webtest/HelloWorldBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/minisMVC-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/core/env/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/BeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/BeanReader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/BeanReader/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultSingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/SimpleBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/SimpleBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/annotation/Autowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/ArgumentValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/ArgumentValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AutowireCapableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanDefinitionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanFactoryPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ConfigurableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ConfigurableListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ListableBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/SingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/SingletonBeanRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/AbstractApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ClassPathXmlApplicationContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/ClassPathXmlResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/ClassPathXmlResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/EnvironmentCapable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/EnvironmentCapable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/PropertyResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/PropertyResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ContextRefreshEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ContextRefreshEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/SimpleApplicationEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/SimpleApplicationEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/exception/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/exception/BeanException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +85,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -51,27 +108,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/xinchen/IdeaProjects/myMiniSpring/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32413793",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.minis.beans.factory.support" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/WebContent" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/main/resources/WebContent/WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.minis.test" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
     <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.minis.test.Test1" />
       <module name="myMiniSpring" />
@@ -85,6 +158,98 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="myMiniSpring:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/myMiniSpring_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="0e7b8e0e-96e5-493a-bc22-8cee1dbd41b4" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63650" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="myMiniSpring:jar" />
+          <artifact name="myMiniSpring:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat 服务器.Tomcat 9" />
+      <item itemvalue="应用程序.Test1" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.Test1" />
@@ -108,7 +273,9 @@
       <workItem from="1679931153320" duration="2444000" />
       <workItem from="1679984560049" duration="9391000" />
       <workItem from="1679996717671" duration="8750000" />
-      <workItem from="1680019033349" duration="15173000" />
+      <workItem from="1680019033349" duration="15376000" />
+      <workItem from="1680610895141" duration="7841000" />
+      <workItem from="1680620261149" duration="1750000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -180,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680181480111</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor(minis.bean): 修改 IOC 工厂，增加事件推送">
+      <created>1680357776299</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680357776299</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +388,24 @@
     <MESSAGE value="feature(com.minis.beans):修改 BeanFactory，支持注解@Atuowired。&#10;&#10;实现 @Autowired 注解" />
     <MESSAGE value="doc(readme):添加 ReadMe 文件。" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增强扩展性" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(minis.bean): 修改 IOC 工厂，增强扩展性" />
+    <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/src.zip!/java/lang/ClassLoader.java</url>
+          <line>1081</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar!/org/apache/catalina/core/StandardContext.class</url>
+          <line>4042</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,7 +1,7 @@
 package com.minis.test;
 
-import com.minis.context.ClassPathXmlApplicationContent;
-import com.minis.exception.BeanException;
+import com.minis.ioc.context.ClassPathXmlApplicationContent;
+import com.minis.ioc.exception.BeanException;
 
 /***
  * @description : Todo

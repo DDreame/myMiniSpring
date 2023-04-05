@@ -10,62 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(minis.bean): 修改 IOC 工厂，增加事件推送">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myMiniSpring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/HelloWorld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/HelloWorldBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/ClassPathXmlResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/MappingValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/XmlConfigReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/webtest/HelloWorldBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/minisMVC-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/RequestMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/XmlScanComponentHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/BeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/BeanReader/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/BeanReader/XmlBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultSingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/SimpleBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/SimpleBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/annotation/Autowired.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/ArgumentValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/ArgumentValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/ArgumentValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/config/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanDefinitionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanDefinitionRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanFactoryPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/BeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/BeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ConfigurableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ConfigurableListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ConfigurableListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/ListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/ListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/beans/factory/support/SingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/SingletonBeanRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ClassPathXmlApplicationContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/ClassPathXmlResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/ClassPathXmlResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/Environment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/EnvironmentCapable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/EnvironmentCapable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/core/env/PropertyResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/core/env/PropertyResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ApplicationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/ContextRefreshEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/ContextRefreshEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/event/SimpleApplicationEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/event/SimpleApplicationEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/exception/BeanException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/exception/BeanException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/HelloWorldBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/minisMVC-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/minisMVC-servlet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +86,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/WebContent" />
       <recent name="$PROJECT_DIR$/src" />
@@ -275,7 +227,7 @@
       <workItem from="1679996717671" duration="8750000" />
       <workItem from="1680019033349" duration="15376000" />
       <workItem from="1680610895141" duration="7841000" />
-      <workItem from="1680620261149" duration="1750000" />
+      <workItem from="1680620261149" duration="6749000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -354,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680357776299</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war">
+      <created>1680622168454</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680622168454</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +348,8 @@
     <MESSAGE value="doc(readme):添加 ReadMe 文件。" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增强扩展性" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
+    <MESSAGE value="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

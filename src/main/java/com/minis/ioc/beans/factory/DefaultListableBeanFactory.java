@@ -1,5 +1,6 @@
 package com.minis.ioc.beans.factory;
 
+import com.minis.ioc.beans.BeanFactory;
 import com.minis.ioc.beans.factory.config.BeanDefinition;
 import com.minis.ioc.beans.factory.support.AbstractAutowireCapableBeanFactory;
 import com.minis.ioc.beans.factory.support.ConfigurableListableBeanFactory;
@@ -17,6 +18,7 @@ import java.util.Map;
  */
 public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements ConfigurableListableBeanFactory {
 
+    private BeanFactory parentBeanFactory;
 
     @Override
     public int getBeanDefinitionCount() {
@@ -38,7 +40,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
     @Override
     public String[] getBeanDefinitionNames() {
-        return (String[]) this.beanNames.toArray();
+        return this.beanNames.toArray(new String[0]);
     }
 
 
@@ -56,7 +58,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
                 result.add(beanName);
             }
         }
-        return (String[]) result.toArray();
+        return result.toArray(new String[0]);
     }
 
     @SuppressWarnings("unchecked")
@@ -71,5 +73,17 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
         return result;
     }
 
+    public void setParent(BeanFactory beanFactory){
+        this.parentBeanFactory = beanFactory;
+    }
 
+    @Override
+    public Object getBean(String beanName) throws BeanException {
+        Object result = super.getBean(beanName);
+        if (result == null) {
+            result = this.parentBeanFactory.getBean(beanName);
+        }
+
+        return result;
+    }
 }

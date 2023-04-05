@@ -78,7 +78,7 @@ public class BeanDefinition {
     }
 
     public ArgumentValues getArgumentValues() {
-        return argumentValues;
+        return argumentValues == null? new ArgumentValues(): argumentValues;
     }
 
     public void setArgumentValues(ArgumentValues argumentValues) {
@@ -86,7 +86,8 @@ public class BeanDefinition {
     }
 
     public PropertyValues getPropertyValues() {
-        return propertyValues;
+
+        return propertyValues == null? new PropertyValues(): propertyValues;
     }
 
     public void setPropertyValues(PropertyValues propertyValues) {

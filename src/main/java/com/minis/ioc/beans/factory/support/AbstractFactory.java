@@ -3,7 +3,6 @@ package com.minis.ioc.beans.factory.support;
 import com.minis.ioc.beans.factory.config.*;
 import com.minis.ioc.beans.factory.DefaultSingletonBeanRegistry;
 import com.minis.ioc.exception.BeanException;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -221,7 +220,7 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
         this.beanDefinitions.put(name,beanDefinition);
         if(!beanDefinition.isLazyInit()){
             try {
-                getBean(beanDefinition.getId());
+                getBean(name);
             }catch (BeanException e){
                 e.printStackTrace();
             }

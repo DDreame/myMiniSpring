@@ -1,5 +1,7 @@
 package com.minis.test.webTest;
 
+import com.minis.ioc.beans.factory.annotation.Autowired;
+import com.minis.test.BaseService;
 import com.minis.web.RequestMapping;
 
 /***

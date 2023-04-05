@@ -1,4 +1,6 @@
-package com.minis.test.webtest;
+package com.minis.test.webTest;
+
+import com.minis.web.RequestMapping;
 
 /***
  * @description : Todo
@@ -6,8 +8,9 @@ package com.minis.test.webtest;
  * @date : 2023/4/4 21:26 
  */
 public class HelloWorldBean {
+    @RequestMapping("/test")
     public String doGet() {
-        return "hello world!";
+        return "hello world! I'm doGet";
     }
     public String doPost() {
         return "hello world!";

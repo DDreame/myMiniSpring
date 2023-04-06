@@ -24,4 +24,7 @@
         <constructor-arg type="String" name="name" value="Test2"/>
         <constructor-arg type="Integer" name="level" value="133"/>
     </bean>
+    <bean id="webBindingInitializer" class="com.minis.test.webTest.DateInitializer">
+
+    </bean>
 </beans>

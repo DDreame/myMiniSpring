@@ -2,6 +2,7 @@ package com.minis.ioc.beans.factory.config;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /***
  * @description : Todo
@@ -13,6 +14,14 @@ public class PropertyValues {
     private final List<PropertyValue> propertyValueList;
     public PropertyValues() {
         this.propertyValueList = new ArrayList<>(0);
+    }
+
+    public PropertyValues(Map<String, Object> map) {
+        this.propertyValueList = new ArrayList<PropertyValue>(10);
+        for (Map.Entry<String,Object> e: map.entrySet()) {
+            PropertyValue pv = new PropertyValue(e.getKey(),e.getValue());
+            this.propertyValueList.add(pv);
+        }
     }
     public List<PropertyValue> getPropertyValueList() {
         return this.propertyValueList;

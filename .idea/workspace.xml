@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="myMiniSpring:jar" />
       <artifact name="myMiniSpring:war" />
     </artifacts-to-build>
   </component>
@@ -10,25 +9,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="refactor(minis.web): 修改结构，Test包移入 Src， 增加 Listener 启动 IOC 容器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/XmlWebApplicationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/MappingRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/MethodParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerMapping.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/AbstractPropertyAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/CustomNumberEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/PropertyEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/PropertyEditorRegistrySupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/StringEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/CustomDateEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/WebBindingInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/CollectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/NumberUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/ObjectUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinderFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/BeanDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/AbstractApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ClassPathXmlApplicationContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/context/ClassPathXmlApplicationContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/ContextLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/ContextLoaderListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/myBean.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +246,7 @@
       <workItem from="1680019033349" duration="15376000" />
       <workItem from="1680610895141" duration="7841000" />
       <workItem from="1680620261149" duration="8425000" />
+      <workItem from="1680795641226" duration="2619000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -333,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680678770059</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。">
+      <created>1680702878167</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680702878167</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +383,8 @@
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
     <MESSAGE value="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war" />
     <MESSAGE value="feat(minis.web): 修改基本结构，构建 @RequestMapping 支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 修改基本结构，构建 @RequestMapping 支持" />
+    <MESSAGE value="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -386,24 +400,79 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerMapping.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="32" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/context/AbstractApplicationContext.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="39" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -413,6 +482,11 @@
         <PinnedItemInfo parentTag="com.minis.ioc.beans.factory.DefaultListableBeanFactory" memberName="beanDefinitionNames" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="methodParameters" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

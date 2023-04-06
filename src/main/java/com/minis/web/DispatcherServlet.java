@@ -78,38 +78,6 @@ public class DispatcherServlet extends HttpServlet {
     }
 
 
-    private List<String> scanPackages(List<String> packages) {
-        List<String> tempControllerNames = new ArrayList<>();
-        for (String packageName : packages) {
-            tempControllerNames.addAll(scanPackage(packageName));
-        }
-        return tempControllerNames;
-    }
-    private List<String> scanPackage(String packageName) {
-        List<String> tempControllerNames = new ArrayList<>();
-        URI uri = null;
-        //将以.分隔的包名换成以/分隔的uri
-        try {
-            uri = this.getClass().getResource("/" +
-                    packageName.replaceAll("\\.", "/")).toURI();
-        } catch (Exception e) {
-        }
-        File dir = new File(uri);
-        //处理对应的文件目录
-        for (File file : Objects.requireNonNull(dir.listFiles())) { //目录下的文件或者子目录
-            if(file.isDirectory()){ //对子目录递归扫描
-                scanPackage(packageName+"."+file.getName());
-            }else{ //类文件
-                String controllerName = packageName +"."
-                        +file.getName().replace(".class", "");
-                tempControllerNames.add(controllerName);
-            }
-        }
-        return tempControllerNames;
-    }
-
-
-
     //对所有的mappingValues中注册的类进行实例化，默认构造函数
     protected void Refresh() {
        initController();

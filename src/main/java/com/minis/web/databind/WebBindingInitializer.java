@@ -1,4 +1,4 @@
-package com.minis.test;
+package com.minis.web.databind;
 
 import com.minis.web.databind.WebDataBinder;
 

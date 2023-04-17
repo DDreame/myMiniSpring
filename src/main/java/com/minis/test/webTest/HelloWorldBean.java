@@ -3,6 +3,8 @@ package com.minis.test.webTest;
 import com.minis.ioc.beans.factory.annotation.Autowired;
 import com.minis.test.BaseService;
 import com.minis.web.RequestMapping;
+import com.minis.web.ResponseBody;
+import com.minis.web.servlet.ModelAndView;
 
 import java.util.Date;
 
@@ -36,4 +38,22 @@ public class HelloWorldBean {
     public String doPost3() {
         return "hello world!";
     }
+    @RequestMapping("/test5")
+    public ModelAndView doTest5(User user) {
+        return new ModelAndView("test","msg",user.getName() + " is coming!");
+    }
+
+    @RequestMapping("/test6")
+    public String doTest6(User user) {
+        return "error";
+    }
+
+    @RequestMapping("/test7")
+    @ResponseBody
+    public User doTest7(User user) {
+        user.setName(user.getName() + "---");
+        user.setBirthday(new Date());
+        return user;
+    }
+
 }

@@ -27,6 +27,10 @@ public class DispatcherServlet extends HttpServlet {
 
     public static final String WEB_APPLICATION_CONTEXT_ATTRIBUTE = DispatcherServlet.class.getName() + ".CONTEXT";
 
+    public static final String HANDLER_ADAPTER_BEAN_NAME = "handlerAdapter";
+
+    public static final String VIEW_RESOLVER_BEAN_NAME = "viewResolver";
+
     private List<String> packageNames = new ArrayList<>();
     private Map<String,Object> controllerObjs = new HashMap<>();
     private List<String> controllerNames = new ArrayList<>();
@@ -38,6 +42,8 @@ public class DispatcherServlet extends HttpServlet {
     private HandlerMapping handlerMapping;
 
     private HandlerAdapter handlerAdapter;
+    private ViewResolver viewResolver;
+
 
 
     @Override
@@ -78,19 +84,32 @@ public class DispatcherServlet extends HttpServlet {
     }
 
 
+
     //对所有的mappingValues中注册的类进行实例化，默认构造函数
     protected void Refresh() {
        initController();
        initHandlerMappings(this.webApplicationContext);
        initHandlerAdapters(this.webApplicationContext);
+       initViewResolvers(this.webApplicationContext);
     }
 
+    protected void initViewResolvers(WebApplicationContext wac) {
+        try {
+            this.viewResolver = (ViewResolver) wac.getBean(VIEW_RESOLVER_BEAN_NAME);
+        } catch (BeanException e) {
+            e.printStackTrace();
+        }
+    }
 
     protected void initHandlerMappings(WebApplicationContext wac) {
         this.handlerMapping = new RequestMappingHandlerMapping(wac);
     }
     protected void initHandlerAdapters(WebApplicationContext wac) {
-        this.handlerAdapter = new RequestMappingHandlerAdapter(wac);
+        try {
+            this.handlerAdapter = (HandlerAdapter) wac.getBean(HANDLER_ADAPTER_BEAN_NAME);
+        } catch (BeanException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -115,7 +134,30 @@ public class DispatcherServlet extends HttpServlet {
             return;
         }
         HandlerAdapter ha = this.handlerAdapter;
-        ha.handle(request, response, handlerMethod);
+        ModelAndView mv = ha.handle(request, response, handlerMethod);
+        render(request, response, mv);
+    }
+
+    protected void render( HttpServletRequest request, HttpServletResponse response,ModelAndView mv) throws Exception {
+        if (mv == null) {
+            response.getWriter().flush();
+            response.getWriter().close();
+            return;
+        }
+
+        String sTarget = mv.getViewName();
+        Map<String, Object> modelMap = mv.getModel();
+        View view = resolveViewName(sTarget, modelMap, request);
+        view.render(modelMap, request, response);
+
+    }
+
+    protected View resolveViewName(String viewName, Map<String, Object> model,
+                                   HttpServletRequest request) throws Exception {
+        if (this.viewResolver != null) {
+            return viewResolver.resolveViewName(viewName);
+        }
+        return null;
     }
 
 }

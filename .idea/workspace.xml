@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="myMiniSpring:jar" />
       <artifact name="myMiniSpring:war" />
     </artifacts-to-build>
   </component>
@@ -9,31 +10,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/AbstractPropertyAccessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/CustomNumberEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/PropertyEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/PropertyEditorRegistrySupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/StringEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/CustomDateEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/WebBindingInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/CollectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/NumberUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/ObjectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/utils/WebUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinderFactory.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。">
+      <change afterPath="$PROJECT_DIR$/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jsp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/ResponseBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultHttpMessageConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/HttpMessageConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/ObjectMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/InternalResourceViewResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/JstlView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/ModelAndView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/ViewResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/minisMVC-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/config/PropertyValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/WebBindingInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebBindingInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/myBean.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,57 +75,54 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2NHoj87g0xFDfkAfXWMEapNicoz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/xinchen/IdeaProjects/myMiniSpring/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32413793&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32413793",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.minis.beans.factory.support" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp" />
+      <recent name="$PROJECT_DIR$/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/jsp" />
+      <recent name="$PROJECT_DIR$/WebContent/WEB-INF" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/minis/test" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/minis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/resources/WebContent" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/WebContent" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/main/resources/WebContent/WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.minis.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
     <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.minis.test.Test1" />
       <module name="myMiniSpring" />
@@ -133,7 +141,7 @@
       <deployment>
         <artifact name="myMiniSpring:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/myMiniSpring_war" />
+            <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
@@ -217,12 +225,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat 服务器.Tomcat 9" />
-      <item itemvalue="应用程序.Test1" />
+      <item itemvalue="Application.Test1" />
+      <item itemvalue="Tomcat Server.Tomcat 9" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Test1" />
+        <item itemvalue="Application.Test1" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +254,10 @@
       <workItem from="1680019033349" duration="15376000" />
       <workItem from="1680610895141" duration="7841000" />
       <workItem from="1680620261149" duration="8425000" />
-      <workItem from="1680795641226" duration="2619000" />
+      <workItem from="1680795641226" duration="4869000" />
+      <workItem from="1680958213407" duration="2514000" />
+      <workItem from="1681216190632" duration="599000" />
+      <workItem from="1681740268664" duration="11558000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -346,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680702878167</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。">
+      <created>1680798585917</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680798585917</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +402,8 @@
     <MESSAGE value="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war" />
     <MESSAGE value="feat(minis.web): 修改基本结构，构建 @RequestMapping 支持" />
     <MESSAGE value="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。" />
+    <MESSAGE value="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,79 +419,19 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
           <line>54</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/JstlView.java</url>
           <line>49</line>
-          <option name="timeStamp" value="80" />
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="81" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/JstlView.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

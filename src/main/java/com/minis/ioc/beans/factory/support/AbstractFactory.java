@@ -39,7 +39,7 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
             if(singleton == null){
                 BeanDefinition beanDefinition = beanDefinitions.get(beanName);
                 if(beanDefinition == null){
-                    throw new BeanException("No BeanNama:" + beanName);
+                    return null;
                 }
                 try{
                     singleton = createBean(beanDefinition);

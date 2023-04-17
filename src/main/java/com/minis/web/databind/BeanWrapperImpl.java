@@ -37,18 +37,12 @@ public class BeanWrapperImpl extends AbstractPropertyAccessor {
         BeanPropertyHandler propertyHandler = new BeanPropertyHandler(pv.getName());
         PropertyEditor pe = this.getCustomEditor(propertyHandler.getPropertyClz());
         if (pe == null) {
-            pe = this.getDefaultEditor(pv.getValue().getClass());
+            pe = this.getDefaultEditor(propertyHandler.getPropertyClz());
 
         }
         if(pe != null){
             pe.setAsText((String) pv.getValue());
-            if(propertyHandler.propertyClz != null){
-                propertyHandler.setValue(pe.getValue());
-            }
-            else {
-                wrappedObject = pe.getValue();
-                System.out.println(wrappedObject);
-            }
+            propertyHandler.setValue(pe.getValue());
         }
         else {
             propertyHandler.setValue(pv.getValue());

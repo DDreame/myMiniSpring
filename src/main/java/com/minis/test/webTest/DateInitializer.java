@@ -1,7 +1,7 @@
 package com.minis.test.webTest;
 
 import com.minis.test.CustomDateEditor;
-import com.minis.test.WebBindingInitializer;
+import com.minis.web.databind.WebBindingInitializer;
 import com.minis.web.databind.WebDataBinder;
 
 import java.util.Date;

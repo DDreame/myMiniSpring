@@ -10,41 +10,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。">
-      <change afterPath="$PROJECT_DIR$/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/ResponseBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultHttpMessageConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/HttpMessageConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/ObjectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/InternalResourceViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/JstlView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/ModelAndView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/ViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/minisMVC-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/jsp/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_war_exploded.xml" beforeDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.web): 增加modelAndView支持">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/JdbcTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserJdbcImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/WebBindingInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebBindingInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/HelloWorldBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/databind/BeanWrapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/HandlerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/myBean.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +230,7 @@
       <workItem from="1680795641226" duration="4869000" />
       <workItem from="1680958213407" duration="2514000" />
       <workItem from="1681216190632" duration="599000" />
-      <workItem from="1681740268664" duration="11558000" />
+      <workItem from="1681740268664" duration="15289000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -364,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680798585917</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat(minis.web): 增加modelAndView支持">
+      <created>1681751875501</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681751875501</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,7 +383,8 @@
     <MESSAGE value="feat(minis.web): 修改基本结构，构建 @RequestMapping 支持" />
     <MESSAGE value="feat(minis.web): 改为两级 ApplicationContext，增强 IOC 容器与 DIspatche 分发的关联。&#10;第一级 使用 XmlWebApplicationContext 处理 Service 容器&#10;第二级 使用 AnnotationConfigWebApplicationContext 处理 Web 服务容器&#10;&#10;重写 Dispatcher 的 Service 方法，放弃 doGet 和 doPost。&#10;使用 HandlerAdapter 和 HandlerMapping 增强路由功能。" />
     <MESSAGE value="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 增加属性转换支持，目前支持复杂参数，不支持简单参数转换。" />
+    <MESSAGE value="feat(minis.web): 增加modelAndView支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.web): 增加modelAndView支持" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

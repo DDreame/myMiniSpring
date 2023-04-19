@@ -2,9 +2,11 @@ package com.minis.test.webTest;
 
 import com.minis.ioc.beans.factory.annotation.Autowired;
 import com.minis.test.BaseService;
+import com.minis.test.service.UserService;
 import com.minis.web.RequestMapping;
 import com.minis.web.ResponseBody;
 import com.minis.web.servlet.ModelAndView;
+import com.minis.test.entity.User;
 
 import java.util.Date;
 
@@ -15,28 +17,28 @@ import java.util.Date;
  */
 public class HelloWorldBean {
     @RequestMapping("/test")
-    public String doGet() {
-        return "hello world! I'm doGet";
+    public ModelAndView doGet() {
+        return new ModelAndView("test","msg","hello world! I'm doGet");
     }
 
     @RequestMapping("/test1")
-    public String doGet1(Integer number) {
-        return "hello world! I'm doGet " + number;
+    public ModelAndView doGet1(Integer number) {
+        return new ModelAndView("test","msg","hello world! I'm doGet " + number);
     }
 
 
     @RequestMapping("/test2")
-    public String doGet2(Date date) {
-        return "hello world! I'm doGet " + date;
+    public ModelAndView doGet2(Date date) {
+        return new ModelAndView("test","msg","hello world! I'm doGet " + date);
     }
 
 
     @RequestMapping("/test3")
-    public String doGet4(String string) {
-        return "hello world! I'm doGet " + string;
+    public ModelAndView doGet4(String string) {
+        return new ModelAndView("test","msg","hello world! I'm doGet " + string);
     }
-    public String doPost3() {
-        return "hello world!";
+    public ModelAndView doPost3() {
+        return new ModelAndView("test","msg","hello world!");
     }
     @RequestMapping("/test5")
     public ModelAndView doTest5(User user) {
@@ -54,6 +56,13 @@ public class HelloWorldBean {
         user.setName(user.getName() + "---");
         user.setBirthday(new Date());
         return user;
+    }
+
+    @RequestMapping("/test8")
+    @ResponseBody
+    public User doTest8() {
+        UserService userService = new UserService();
+        return userService.getUserInfo(1);
     }
 
 }

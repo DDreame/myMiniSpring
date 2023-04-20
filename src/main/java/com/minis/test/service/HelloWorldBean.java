@@ -9,6 +9,7 @@ import com.minis.web.servlet.ModelAndView;
 import com.minis.test.entity.User;
 
 import java.util.Date;
+import java.util.List;
 
 /***
  * @description : Todo
@@ -71,8 +72,14 @@ public class HelloWorldBean {
 
     @RequestMapping("/test9")
     @ResponseBody
-    public User doTest9(Integer id) {
-        return userService.getUserInfo2(id);
+    public User doTest9() {
+        return userService.getUserInfo2(2);
+    }
+
+    @RequestMapping("/test10")
+    @ResponseBody
+    public List<User> doTest10() {
+        return userService.getUserInfo3(1);
     }
 
 }

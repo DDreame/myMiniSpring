@@ -18,7 +18,7 @@ public class ArgumentPreparedStatementSetter {
         if(this.args != null){
             for(int i = 0; i < this.args.length; i ++){
                 Object arg = args[i];
-                doSetValue(pstmt, i + 1, arg);
+                doSetValue(preparedStatement, i + 1, arg);
             }
         }
     }

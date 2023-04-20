@@ -13,16 +13,30 @@
  - [x] 实现 XML 的参数注入
  - [x] 打破循环依赖
  - [x] 实现一个注解
- - [ ] 构建工厂体系
- - [ ] 实现事件系统
+ - [x] 构建工厂体系
+ - [x] 实现事件系统
+ - [ ] 实现基本类型注入
 
 ## MVC
 
-todo...
+- [x] 使用 Servlet 拦截请求
+- [x] IOC 管理 MVC
+- [x] 两级缓存，合并 IOC 和 MVC
+- [x] 使用 Dispatcher 分别管理
+- [x] 实现返回 Json 数据
+- [x] 实现使用 String 返回 JSP
+- [ ] 实现返回基本类型而非 JSP
+
 
 ## JDBC Template
 
-todo...
+- [x] 抽取JdbcTemplate
+- [x] 使用回调函数简化业务类
+- [x] 组合IOC容器
+- [x] 组件化SQL参数注入
+- [ ] SQL 返回结果优化
+- [ ] 构建链接池
+
 
 ## AOP
 

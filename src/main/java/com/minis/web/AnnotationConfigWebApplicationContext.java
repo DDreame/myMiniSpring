@@ -3,6 +3,7 @@ package com.minis.web;
 import com.minis.ioc.beans.factory.DefaultListableBeanFactory;
 import com.minis.ioc.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import com.minis.ioc.beans.factory.config.BeanDefinition;
+import com.minis.ioc.beans.factory.support.AbstractFactory;
 import com.minis.ioc.beans.factory.support.BeanFactoryPostProcessor;
 import com.minis.ioc.beans.factory.support.BeanPostProcessor;
 import com.minis.ioc.beans.factory.support.ConfigurableListableBeanFactory;
@@ -13,6 +14,7 @@ import com.minis.ioc.event.ApplicationEventPublisher;
 import com.minis.ioc.event.ApplicationListener;
 import com.minis.ioc.event.SimpleApplicationEventPublisher;
 import com.minis.ioc.exception.BeanException;
+import com.minis.utils.MyUtils;
 
 import javax.servlet.ServletContext;
 import java.io.File;
@@ -21,6 +23,7 @@ import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 /***
@@ -50,7 +53,7 @@ public class AnnotationConfigWebApplicationContext extends AbstractApplicationCo
         List<String> packageNames = XmlScanComponentHelper.getNodeValue(xmlPath);
         List<String> controllerNames = scanPackages(packageNames);
         this.beanFactory = new DefaultListableBeanFactory();
-        this.beanFactory.setParent(this.parentApplicationContext.getBeanFactory());
+        setParent(applicationContext);
         loadBeanDefinitions(controllerNames);
         if(true){
             try {
@@ -61,10 +64,16 @@ public class AnnotationConfigWebApplicationContext extends AbstractApplicationCo
         }
     }
 
+    /**
+     * 此处如果修改为类名+首字母小写 方便自动加载
+     * 但是 initController 则会出错
+     * @param controllerNames
+     */
     public void loadBeanDefinitions(List<String> controllerNames) {
         for (String controller : controllerNames) {
-            BeanDefinition beanDefinition=new BeanDefinition(controller, controller);
-            this.beanFactory.registerBeanDefinition(controller,beanDefinition);
+
+            BeanDefinition beanDefinition=new BeanDefinition(MyUtils.getClazzName(controller), controller);
+            this.beanFactory.registerBeanDefinition(beanDefinition);
         }
     }
 
@@ -152,5 +161,9 @@ public class AnnotationConfigWebApplicationContext extends AbstractApplicationCo
     @Override
     public void addApplicationListener(ApplicationListener listener) {
         this.getApplicationEventPublisher().addApplicationListener(listener);
+    }
+
+    public BeanDefinition getBeanDefinition(String beanName){
+        return this.beanFactory.getBeanDefinition(beanName);
     }
 }

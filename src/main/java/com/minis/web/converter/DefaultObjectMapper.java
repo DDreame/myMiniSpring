@@ -34,7 +34,8 @@ public class DefaultObjectMapper implements ObjectMapper{
 
     @Override
     public String writeValuesAsString(Object obj) {
-        StringBuilder sJsonStr = new StringBuilder("{"); Class clz = obj.getClass();
+        StringBuilder sJsonStr = new StringBuilder("{");
+        Class clz = obj.getClass();
         Field[] fields = clz.getDeclaredFields();
         //对返回对象中的每一个属性进行格式转换
         for (Field field : fields) {

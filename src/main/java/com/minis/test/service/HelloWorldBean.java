@@ -1,4 +1,4 @@
-package com.minis.test.webTest;
+package com.minis.test.service;
 
 import com.minis.ioc.beans.factory.annotation.Autowired;
 import com.minis.test.BaseService;
@@ -16,6 +16,10 @@ import java.util.Date;
  * @date : 2023/4/4 21:26 
  */
 public class HelloWorldBean {
+
+    @Autowired
+    UserService userService;
+
     @RequestMapping("/test")
     public ModelAndView doGet() {
         return new ModelAndView("test","msg","hello world! I'm doGet");
@@ -35,6 +39,7 @@ public class HelloWorldBean {
 
     @RequestMapping("/test3")
     public ModelAndView doGet4(String string) {
+        System.out.println(string);
         return new ModelAndView("test","msg","hello world! I'm doGet " + string);
     }
     public ModelAndView doPost3() {
@@ -61,8 +66,13 @@ public class HelloWorldBean {
     @RequestMapping("/test8")
     @ResponseBody
     public User doTest8() {
-        UserService userService = new UserService();
         return userService.getUserInfo(1);
+    }
+
+    @RequestMapping("/test9")
+    @ResponseBody
+    public User doTest9(Integer id) {
+        return userService.getUserInfo2(id);
     }
 
 }

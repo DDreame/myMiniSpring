@@ -1,19 +1,14 @@
 package com.minis.web;
 
-
+import com.minis.ioc.beans.factory.config.BeanDefinition;
 import com.minis.ioc.core.Resource;
 import com.minis.ioc.exception.BeanException;
 import com.minis.web.servlet.*;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URI;
 import java.net.URL;
 import java.util.*;
 
@@ -26,8 +21,6 @@ public class DispatcherServlet extends HttpServlet {
 
 
     public static final String WEB_APPLICATION_CONTEXT_ATTRIBUTE = DispatcherServlet.class.getName() + ".CONTEXT";
-
-    public static final String HANDLER_ADAPTER_BEAN_NAME = "handlerAdapter";
 
     public static final String VIEW_RESOLVER_BEAN_NAME = "viewResolver";
 
@@ -69,15 +62,16 @@ public class DispatcherServlet extends HttpServlet {
     private void initController(){
         this.controllerNames = Arrays.asList(this.webApplicationContext.getBeanDefinitionNames());
         for (String controllerName : this.controllerNames) {
+            BeanDefinition beanDefinition = this.webApplicationContext.getBeanDefinition(controllerName);
             try {
-                this.controllerClasses.put(controllerName,Class.forName(controllerName));
+                this.controllerClasses.put(beanDefinition.getClassName(),Class.forName(beanDefinition.getClassName()));
             } catch (ClassNotFoundException e1) {
                 e1.printStackTrace();
             }
             try {
-                this.controllerObjs.put(controllerName,this.webApplicationContext.getBean(controllerName));
+                this.controllerObjs.put(beanDefinition.getClassName(), this.webApplicationContext.getBean(controllerName));
                 System.out.println("controller : "+controllerName);
-            } catch ( BeanException e) {
+            } catch (BeanException e) {
                 e.printStackTrace();
             }
         }
@@ -105,11 +99,8 @@ public class DispatcherServlet extends HttpServlet {
         this.handlerMapping = new RequestMappingHandlerMapping(wac);
     }
     protected void initHandlerAdapters(WebApplicationContext wac) {
-        try {
-            this.handlerAdapter = (HandlerAdapter) wac.getBean(HANDLER_ADAPTER_BEAN_NAME);
-        } catch (BeanException e) {
-            throw new RuntimeException(e);
-        }
+        this.handlerAdapter = new RequestMappingHandlerAdapter(wac);
+
     }
 
 

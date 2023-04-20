@@ -1,6 +1,7 @@
 package com.minis.ioc.beans.factory.support;
 
 import com.minis.ioc.beans.BeanFactory;
+import com.minis.ioc.beans.factory.config.BeanDefinition;
 import com.minis.ioc.exception.BeanException;
 
 import java.util.Map;
@@ -19,6 +20,8 @@ public interface ListableBeanFactory extends BeanFactory {
     String[] getBeanDefinitionNames();
 
     String[] getBeanNamesForType(Class<?> type);
+
+    BeanDefinition getBeanDefinition(String beanName);
 
     <T> Map<String, T> getBeansOfType(Class type) throws BeanException;
 

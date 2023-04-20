@@ -2,6 +2,7 @@ package com.minis.ioc.context;
 
 import com.minis.ioc.beans.factory.DefaultListableBeanFactory;
 import com.minis.ioc.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
+import com.minis.ioc.beans.factory.config.BeanDefinition;
 import com.minis.ioc.beans.factory.support.ConfigurableListableBeanFactory;
 import com.minis.ioc.core.ClassPathXmlResource;
 import com.minis.ioc.core.Resource;
@@ -85,5 +86,10 @@ public class ClassPathXmlApplicationContent extends AbstractApplicationContext {
     @Override
     public void publishEvent(ApplicationEvent event) {
         this.getApplicationEventPublisher().publishEvent(event);
+    }
+
+    @Override
+    public BeanDefinition getBeanDefinition(String beanName) {
+        return getBeanDefinition(beanName);
     }
 }

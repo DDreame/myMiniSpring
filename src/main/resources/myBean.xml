@@ -25,11 +25,6 @@
         <constructor-arg type="Integer" name="level" value="133"/>
     </bean>
 
-    <bean id="handlerAdapter" class="com.minis.web.servlet.RequestMappingHandlerAdapter">
-        <property type="com.minis.web.converter.HttpMessageConverter" name="messageConverter" ref="messageConverter"/>
-        <property type="com.minis.web.databind.WebBindingInitializer" name="webBindingInitializer" ref="webBindingInitializer"/>
-    </bean>
-
     <bean id="webBindingInitializer" class="com.minis.test.webTest.DateInitializer">
     </bean>
     <bean id="messageConverter" class="com.minis.web.converter.DefaultHttpMessageConverter">
@@ -45,6 +40,18 @@
         <property type="String" name="viewClassName" value="com.minis.web.servlet.JstlView" />
         <property type="String" name="prefix" value="jsp/" />
         <property type="String" name="suffix" value=".jsp" />
+    </bean>
+
+    <bean id="dataSource" class="com.minis.jdbc.core.SingleConnectionDataSource">
+        <property type="String" name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property type="String" name="url" value="jdbc:mysql://159.75.122.81:3306/minispring?characterEncoding=utf-8" />
+        <property type="String" name="username"  value="dddream"/>
+        <property type="String" name="password" value="dddreame"/>
+    </bean>
+
+
+    <bean id="jdbcTemplate" class="com.minis.test.service.UserJdbcImpl">
+        <property type="javax.sql.DataSource" name="dataSource" ref="dataSource"/>
     </bean>
 
 </beans>

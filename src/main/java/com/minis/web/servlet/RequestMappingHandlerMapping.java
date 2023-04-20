@@ -1,5 +1,6 @@
 package com.minis.web.servlet;
 
+import com.minis.ioc.beans.factory.config.BeanDefinition;
 import com.minis.web.RequestMapping;
 import com.minis.web.WebApplicationContext;
 
@@ -27,8 +28,9 @@ public class RequestMappingHandlerMapping implements HandlerMapping{
         String[] controllerNames = wac.getBeanDefinitionNames();
         for(String controllerName: controllerNames){
             try {
-                clazz = Class.forName(controllerName);
-                obj = clazz.newInstance();
+                BeanDefinition beanDefinition = this.wac.getBeanDefinition(controllerName);
+                clazz = Class.forName(beanDefinition.getClassName());
+                obj = this.wac.getBean(controllerName);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

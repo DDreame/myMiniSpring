@@ -48,11 +48,14 @@ public class RequestMappingHandlerAdapter implements HandlerAdapter{
     public RequestMappingHandlerAdapter(WebApplicationContext wac){
         this.wac = wac;
         try {
-            this.webBindingInitializer = (WebBindingInitializer) this.wac.getBean("com.minis.test.webTest.DateInitializer");
-        } catch (BeanException e) {
+            this.webBindingInitializer = (WebBindingInitializer) this.wac.getBean("webBindingInitializer");
+            this.messageConverter = (HttpMessageConverter) this.wac.getBean("messageConverter");
+         } catch (BeanException e) {
             throw new RuntimeException(e);
         }
     }
+
+
 
     @Override
     public ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

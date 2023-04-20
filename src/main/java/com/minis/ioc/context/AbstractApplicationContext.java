@@ -1,6 +1,7 @@
 package com.minis.ioc.context;
 
 import com.minis.ioc.beans.factory.config.BeanDefinition;
+import com.minis.ioc.beans.factory.support.AbstractFactory;
 import com.minis.ioc.beans.factory.support.BeanFactoryPostProcessor;
 import com.minis.ioc.beans.factory.support.BeanPostProcessor;
 import com.minis.ioc.beans.factory.support.ConfigurableListableBeanFactory;

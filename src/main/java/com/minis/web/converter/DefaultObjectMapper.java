@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 
 /***
  * @description : Todo
@@ -34,8 +35,28 @@ public class DefaultObjectMapper implements ObjectMapper{
 
     @Override
     public String writeValuesAsString(Object obj) {
+        if (obj instanceof List) {
+            return writeListValuesAsString((List<?>) obj);
+        } else {
+            return writeSingleValueAsString(obj);
+        }
+    }
+
+    private String writeListValuesAsString(List<?> list) {
+        StringBuilder sJsonStr = new StringBuilder("[");
+        for (Object obj : list) {
+            if (sJsonStr.length() > 1) {
+                sJsonStr.append(',');
+            }
+            sJsonStr.append(writeSingleValueAsString(obj));
+        }
+        sJsonStr.append("]");
+        return sJsonStr.toString();
+    }
+
+    private String writeSingleValueAsString(Object obj) {
         StringBuilder sJsonStr = new StringBuilder("{");
-        Class clz = obj.getClass();
+        Class<?> clz = obj.getClass();
         Field[] fields = clz.getDeclaredFields();
         //对返回对象中的每一个属性进行格式转换
         for (Field field : fields) {

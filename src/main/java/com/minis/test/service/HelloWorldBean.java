@@ -1,8 +1,6 @@
 package com.minis.test.service;
 
 import com.minis.ioc.beans.factory.annotation.Autowired;
-import com.minis.test.BaseService;
-import com.minis.test.service.UserService;
 import com.minis.web.RequestMapping;
 import com.minis.web.ResponseBody;
 import com.minis.web.servlet.ModelAndView;

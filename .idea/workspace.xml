@@ -10,15 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="doc(README.md): 修改 todolist">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/ResultetExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/RowMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/RowMapperResultSetExtractor.java" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.jdbc): 优化返回结果，支持列表式返回">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/ArgumentPreparedStatementSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/ArgumentPreparedStatementSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/JdbcTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/jdbc/core/JdbcTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +253,7 @@
       <workItem from="1681216190632" duration="599000" />
       <workItem from="1681740268664" duration="17661000" />
       <workItem from="1681956811698" duration="17802000" />
-      <workItem from="1681996445068" duration="2328000" />
+      <workItem from="1681996445068" duration="3625000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -399,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681996143476</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat(minis.jdbc): 优化返回结果，支持列表式返回">
+      <created>1681999067978</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681999067978</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +446,8 @@
     <MESSAGE value="fix(minis.servlet): 修改Servlet注入相关Bug&#10;&#10;1.修改 RequestMappingHandlerMapping 中 MappingObj 为 NewInstance 而非 Bean的错误&#10;2.修改 RequestMappingHandlerAdapter 为 new 方式而非注入方式，防止属性丢失&#10;3.为 AnnotationConfigWebApplicationContext 增加 getBeanDefinition 方法，优化注入。&#10;4.修改 AnnotationConfigWebApplicationContext 的 loadBeanDefinitions 方法，beanName 由原来的 完整类名改为类文件名称并且首字母小写，此方案是配合 fix3 一起修改的" />
     <MESSAGE value="refactor(minis.jdbc):修改sql参数注入逻辑，抽取为独立组件" />
     <MESSAGE value="doc(README.md): 修改 todolist" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc(README.md): 修改 todolist" />
+    <MESSAGE value="feat(minis.jdbc): 优化返回结果，支持列表式返回" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.jdbc): 优化返回结果，支持列表式返回" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -505,13 +509,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java</url>
-          <line>69</line>
+          <line>67</line>
           <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java</url>

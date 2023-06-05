@@ -42,11 +42,12 @@
         <property type="String" name="suffix" value=".jsp" />
     </bean>
 
-    <bean id="dataSource" class="com.minis.jdbc.core.SingleConnectionDataSource">
+    <bean id="dataSource" class="com.minis.jdbc.pool.PooledDataSource">
         <property type="String" name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property type="String" name="url" value="jdbc:mysql://159.75.122.81:3306/minispring?characterEncoding=utf-8" />
         <property type="String" name="username"  value="dddream"/>
         <property type="String" name="password" value="dddreame"/>
+        <property type="int" name="initialSize" value="3"/>
     </bean>
 
 

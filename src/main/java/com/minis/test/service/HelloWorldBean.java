@@ -80,4 +80,10 @@ public class HelloWorldBean {
         return userService.getUserInfo3(1);
     }
 
+    @RequestMapping("/test11")
+    @ResponseBody
+    public User doTest11() {
+        return userService.getUserInfo4(1);
+    }
+
 }

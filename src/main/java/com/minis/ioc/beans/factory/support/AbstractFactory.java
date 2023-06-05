@@ -65,17 +65,23 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
     }
 
     private void invokeInitMethod(BeanDefinition beanDefinition, Object obj){
-        Class<?> clazz = beanDefinition.getClass();
+        Class<?> clz = obj.getClass();
         Method method = null;
-        try{
-            method = clazz.getMethod(beanDefinition.getClassName());
+        try {
+            method = clz.getMethod(beanDefinition.getInitMethodName());
         } catch (NoSuchMethodException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            e.printStackTrace();
         }
         try {
             method.invoke(obj);
-        } catch (InvocationTargetException | IllegalAccessException e) {
-            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
     }
 

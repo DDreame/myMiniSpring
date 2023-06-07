@@ -94,11 +94,20 @@ public class HelloWorldBean {
 
     @Autowired
     IAction action;
-    @RequestMapping("/testaop") public void doTestAop() {
+    @RequestMapping("/testaop")
+    public void doTestAop() {
         DynamicProxy proxy = new DynamicProxy(action);
         IAction p = (IAction)proxy.getProxy();
         p.doAction();
-        String str = "test aop, hello world!";
+        String str = "test aop1, hello world!";
         System.out.println(str);
     }
+
+    @RequestMapping("/testaop2")
+    public void doTestRealAop() {
+        action.doAction();
+        String str = "test aop2, hello world!";
+        System.out.println(str);
+    }
+
 }

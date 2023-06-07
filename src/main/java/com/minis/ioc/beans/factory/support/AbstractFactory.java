@@ -1,5 +1,6 @@
 package com.minis.ioc.beans.factory.support;
 
+import com.minis.ioc.beans.factory.FactoryBean;
 import com.minis.ioc.beans.factory.config.*;
 import com.minis.ioc.beans.factory.DefaultSingletonBeanRegistry;
 import com.minis.ioc.exception.BeanException;
@@ -16,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author : DDDreame
  * @date : 2023/3/28 23:32 
  */
-public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
+public abstract class AbstractFactory extends FactoryBeanRegistrySupport
         implements ConfigurableBeanFactory, BeanDefinitionRegistry {
 
     public Map<String, BeanDefinition> beanDefinitions = new ConcurrentHashMap<>(256);
@@ -58,11 +59,21 @@ public abstract class AbstractFactory extends DefaultSingletonBeanRegistry
                 // step 4: postProcessAfterInitialization
                 applyBeanPostProcessorsAfterInitialization(singleton, beanName);
             }
-
-
+        }
+        if(singleton instanceof FactoryBean){
+            return this.getObjectFroBeanInstance(singleton, beanName);
         }
         return singleton;
     }
+
+    protected Object getObjectFroBeanInstance(Object singleton, String beanName) {
+        if(!(singleton instanceof  FactoryBean)){
+            return singleton;
+        }
+        FactoryBean<?> factoryBean = (FactoryBean<?>) singleton;
+        return getObjectFromFactoryBean(factoryBean, beanName);
+    }
+
 
     private void invokeInitMethod(BeanDefinition beanDefinition, Object obj){
         Class<?> clz = obj.getClass();

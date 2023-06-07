@@ -56,11 +56,14 @@
     </bean>
 
 
-    <bean id="action" class="com.minis.test.aop.Action1"/>
-
     <bean id="sqlSessionFactory" class="com.minis.jdbc.baits.DefaultSqlSessionFactory" init-method="init">
         <property type="String" name="mapperLocations" value="mapper"/>
     </bean>
 
+
+    <bean id="realAction" class="com.minis.test.aop.Action1"/>
+    <bean id="action" class="com.minis.aop.ProxyFactoryBean" >
+        <property type="java.lang.Object" name="target" ref="realAction"/>
+    </bean>
 
 </beans>

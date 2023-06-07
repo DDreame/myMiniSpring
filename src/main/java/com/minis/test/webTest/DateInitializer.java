@@ -11,8 +11,7 @@ import java.util.Date;
  * @author : DDDreame
  * @date : 2023/4/6 20:41 
  */
-public class DateInitializer implements WebBindingInitializer
-{
+public class DateInitializer implements WebBindingInitializer {
     @Override
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(Date.class, new CustomDateEditor(Date.class, "yyyy-MM-dd", false));

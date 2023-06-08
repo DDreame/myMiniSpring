@@ -109,5 +109,13 @@ public class HelloWorldBean {
         String str = "test aop2, hello world!";
         System.out.println(str);
     }
+    @Autowired
+    IAction action2;
+    @RequestMapping("/testaop3")
+    public void doTestRealAop3() {
+        String str = "________test aop3, hello world!_______";
+        System.out.println(str);
+        action2.doAction();
+    }
 
 }

@@ -67,4 +67,16 @@
         <property type="String" name="interceptorName" value="myInterceptor"/>
     </bean>
 
+
+    <bean id="beforeAdvice" class="com.minis.test.aop.MyBeforeAdvice" />
+    <bean id="afterAdvice" class="com.minis.test.aop.MyAfterAdvice" />
+    <bean id="realAction2" class="com.minis.test.aop.Action2"/>
+    <bean id="tempAction" class="com.minis.aop.ProxyFactoryBean" >
+        <property type="java.lang.Object" name="target" ref="realAction2"/>
+        <property type="String" name="interceptorName" value="beforeAdvice"/>
+    </bean>
+    <bean id="action2" class="com.minis.aop.ProxyFactoryBean" >
+        <property type="java.lang.Object" name="target" ref="tempAction"/>
+        <property type="String" name="interceptorName" value="afterAdvice"/>
+    </bean>
 </beans>

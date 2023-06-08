@@ -1,7 +1,6 @@
 package com.minis.aop;
 
-import com.minis.aop.Interceptor.Advisor;
-import com.minis.aop.Interceptor.MethodInterceptor;
+import com.minis.aop.Interceptor.*;
 import com.minis.ioc.beans.BeanFactory;
 import com.minis.ioc.beans.factory.FactoryBean;
 import com.minis.ioc.beans.factory.annotation.Autowired;
@@ -28,15 +27,24 @@ public class ProxyFactoryBean implements FactoryBean<Object>{
         this.aopProxyFactory = new DefaultAopProxyFactory();
     }
     private synchronized void initializeAdvisor(){
-        MethodInterceptor advice = null;
+        Object advice = null;
         MethodInterceptor mi = null;
         try {
-            advice = (MethodInterceptor) this.beanFactory.getBean(this.interceptorName);
+            advice = this.beanFactory.getBean(this.interceptorName);
         }catch (BeanException e){
             e.printStackTrace();
         }
+        if(advice instanceof BeforeAdvice){
+            mi = new MethodBeforeAdviceInterceptor((MethodBeforeAdvice)  advice);
+        }
+        else if(advice instanceof AfterAdvice){
+            mi = new AfterReturningAdviceInterceptor((AfterReturningAdvice) advice);
+        }
+        else if(advice != null){
+            mi =  (MethodInterceptor) advice;
+        }
         advisor = new DefaultAdvisor();
-        advisor.setMethodInterceptor(advice);
+        advisor.setMethodInterceptor(mi);
     }
     public AopProxyFactory getAopProxyFactory() {
         return aopProxyFactory;

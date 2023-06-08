@@ -30,7 +30,14 @@ public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor {
             boolean isAutowired = field.isAnnotationPresent(Autowired.class);
             if(isAutowired){
                 String filedName = field.getName();
-                Object autowiredObj = this.beanFactory.getBean(filedName);
+                //过渡写法
+                Object autowiredObj = null;
+                if(filedName.equals("beanFactory")){
+                    autowiredObj = this.beanFactory;
+                } else {
+                    autowiredObj = this.beanFactory.getBean(filedName);
+                }
+
                 try {
                     field.setAccessible(true);
                     field.set(bean, autowiredObj);

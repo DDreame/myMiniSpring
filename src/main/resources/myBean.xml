@@ -60,10 +60,11 @@
         <property type="String" name="mapperLocations" value="mapper"/>
     </bean>
 
-
+    <bean id="myInterceptor" class="com.minis.test.service.TracingInterceptor" />
     <bean id="realAction" class="com.minis.test.aop.Action1"/>
     <bean id="action" class="com.minis.aop.ProxyFactoryBean" >
         <property type="java.lang.Object" name="target" ref="realAction"/>
+        <property type="String" name="interceptorName" value="myInterceptor"/>
     </bean>
 
 </beans>

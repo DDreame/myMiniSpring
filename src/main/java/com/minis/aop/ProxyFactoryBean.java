@@ -1,6 +1,7 @@
 package com.minis.aop;
 
 import com.minis.aop.Interceptor.*;
+import com.minis.aop.methodMatcher.PointerAdvisor;
 import com.minis.ioc.beans.BeanFactory;
 import com.minis.ioc.beans.factory.FactoryBean;
 import com.minis.ioc.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class ProxyFactoryBean implements FactoryBean<Object>{
     @Autowired
     private BeanFactory beanFactory;
     private String interceptorName;
-    private Advisor advisor;
+    private PointerAdvisor advisor;
     public ProxyFactoryBean(){
         this.aopProxyFactory = new DefaultAopProxyFactory();
     }
@@ -34,17 +35,7 @@ public class ProxyFactoryBean implements FactoryBean<Object>{
         }catch (BeanException e){
             e.printStackTrace();
         }
-        if(advice instanceof BeforeAdvice){
-            mi = new MethodBeforeAdviceInterceptor((MethodBeforeAdvice)  advice);
-        }
-        else if(advice instanceof AfterAdvice){
-            mi = new AfterReturningAdviceInterceptor((AfterReturningAdvice) advice);
-        }
-        else if(advice != null){
-            mi =  (MethodInterceptor) advice;
-        }
-        advisor = new DefaultAdvisor();
-        advisor.setMethodInterceptor(mi);
+        this.advisor = (PointerAdvisor)  advice;
     }
     public AopProxyFactory getAopProxyFactory() {
         return aopProxyFactory;

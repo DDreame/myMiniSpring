@@ -5,14 +5,13 @@ package com.minis.test.aop;
  * @author : DDDreame
  * @date : 2023/6/8 17:26 
  */
-public class Action2 implements IAction{
+public class Action3 implements IAction{
     @Override
     public void doAction() {
-        System.out.println("this is action2");
+        System.out.println("this is action3");
     }
 
-    @Override
     public void doSome() {
-        System.out.println("this is action2 do some!");
+        System.out.println("this is doSomeThing");
     }
 }

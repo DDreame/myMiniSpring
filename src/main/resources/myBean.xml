@@ -64,19 +64,39 @@
     <bean id="realAction" class="com.minis.test.aop.Action1"/>
     <bean id="action" class="com.minis.aop.ProxyFactoryBean" >
         <property type="java.lang.Object" name="target" ref="realAction"/>
-        <property type="String" name="interceptorName" value="myInterceptor"/>
+        <property type="String" name="interceptorName" value="advisor"/>
+    </bean>
+
+    <bean id="advisor" class="com.minis.aop.methodMatcher.NameMatchMethodPointcutAdvisor">
+        <property type="com.minis.aop.Interceptor.Advice" name="advice" ref="myInterceptor"/>
+        <property type="String" name="mappedName" value="do*"/>
     </bean>
 
 
     <bean id="beforeAdvice" class="com.minis.test.aop.MyBeforeAdvice" />
     <bean id="afterAdvice" class="com.minis.test.aop.MyAfterAdvice" />
     <bean id="realAction2" class="com.minis.test.aop.Action2"/>
+
+    <bean id="realAction3" class="com.minis.test.aop.Action3"/>
     <bean id="tempAction" class="com.minis.aop.ProxyFactoryBean" >
         <property type="java.lang.Object" name="target" ref="realAction2"/>
-        <property type="String" name="interceptorName" value="beforeAdvice"/>
+        <property type="String" name="interceptorName" value="beforeAdvisor"/>
     </bean>
     <bean id="action2" class="com.minis.aop.ProxyFactoryBean" >
         <property type="java.lang.Object" name="target" ref="tempAction"/>
-        <property type="String" name="interceptorName" value="afterAdvice"/>
+        <property type="String" name="interceptorName" value="afterAdvisor"/>
+    </bean>
+    <bean id="beforeAdvisor" class="com.minis.aop.methodMatcher.NameMatchMethodPointcutAdvisor">
+        <property type="com.minis.aop.Interceptor.Advice" name="advice" ref="beforeAdvice"/>
+        <property type="String" name="mappedName" value="do*"/>
+    </bean>
+
+    <bean id="afterAdvisor" class="com.minis.aop.methodMatcher.NameMatchMethodPointcutAdvisor">
+        <property type="com.minis.aop.Interceptor.Advice" name="advice" ref="afterAdvice"/>
+        <property type="String" name="mappedName" value="do*"/>
+    </bean>
+    <bean id="action3" class="com.minis.aop.ProxyFactoryBean" >
+        <property type="java.lang.Object" name="target" ref="realAction3"/>
+        <property type="String" name="interceptorName" value="beforeAdvisor"/>
     </bean>
 </beans>

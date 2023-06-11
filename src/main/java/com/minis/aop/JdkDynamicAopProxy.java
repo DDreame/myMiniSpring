@@ -4,6 +4,7 @@ import com.minis.aop.Interceptor.Advisor;
 import com.minis.aop.Interceptor.MethodInterceptor;
 import com.minis.aop.Interceptor.MethodInvocation;
 import com.minis.aop.Interceptor.ReflectiveMethodInvocation;
+import com.minis.aop.methodMatcher.PointerAdvisor;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -16,9 +17,9 @@ import java.lang.reflect.Proxy;
  */
 public class JdkDynamicAopProxy implements AopProxy, InvocationHandler {
     Object target;
-    Advisor advisor;
+    PointerAdvisor advisor;
 
-    public JdkDynamicAopProxy(Object target, Advisor advisor) {
+    public JdkDynamicAopProxy(Object target, PointerAdvisor advisor) {
         this.target = target;
         this.advisor = advisor;
     }
@@ -32,8 +33,8 @@ public class JdkDynamicAopProxy implements AopProxy, InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        if(method.getName().equals("doAction")){
-            Class<?> targetClass = (target != null ? target.getClass() : null);
+        Class<?> targetClass = (target != null ? target.getClass() : null);
+        if(this.advisor.getPointcut().getMethodMatcher().matcher(method,targetClass)){
             MethodInterceptor interceptor = this.advisor.getMethodInterceptor();
             MethodInvocation invocation =
                     new ReflectiveMethodInvocation(proxy, target, method, args, targetClass);

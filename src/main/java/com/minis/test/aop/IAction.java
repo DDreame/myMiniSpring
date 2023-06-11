@@ -7,4 +7,5 @@ package com.minis.test.aop;
  */
 public interface IAction {
     void doAction();
+    void doSome();
 }

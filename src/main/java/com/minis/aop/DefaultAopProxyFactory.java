@@ -1,6 +1,7 @@
 package com.minis.aop;
 
 import com.minis.aop.Interceptor.Advisor;
+import com.minis.aop.methodMatcher.PointerAdvisor;
 
 /***
  * @description : Todo
@@ -10,7 +11,7 @@ import com.minis.aop.Interceptor.Advisor;
 public class DefaultAopProxyFactory implements AopProxyFactory{
 
     @Override
-    public AopProxy createAopProxy(Object target, Advisor advisor) {
+    public AopProxy createAopProxy(Object target, PointerAdvisor advisor) {
         return new JdkDynamicAopProxy(target, advisor);
     }
 }

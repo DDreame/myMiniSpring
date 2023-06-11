@@ -118,4 +118,15 @@ public class HelloWorldBean {
         action2.doAction();
     }
 
+
+    @Autowired
+    IAction action3;
+    @RequestMapping("/testaop4")
+    public void doTestRealAop4() {
+        String str = "________test aop4, hello world!_______";
+        System.out.println(str);
+        action3.doAction();
+        action3.doSome();
+    }
+
 }

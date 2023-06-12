@@ -56,6 +56,7 @@ public class AutowiredAnnotationBeanPostProcessor implements BeanPostProcessor {
     public BeanFactory getBeanFactory() {
         return beanFactory;
     }
+    @Override
     public void setBeanFactory(BeanFactory beanFactory) {
         this.beanFactory = beanFactory;
     }

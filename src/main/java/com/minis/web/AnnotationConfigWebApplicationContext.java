@@ -58,6 +58,7 @@ public class AnnotationConfigWebApplicationContext extends AbstractApplicationCo
         if(true){
             try {
                 refresh();
+                refresh();
             } catch (BeanException e) {
                 throw new RuntimeException(e);
             }

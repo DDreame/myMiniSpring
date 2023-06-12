@@ -16,6 +16,7 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
     protected final Map<String, Object> singletons = new ConcurrentHashMap<>(256);
 
+    protected final Map<String, Object> emptySingletons = new ConcurrentHashMap<>(16);
     protected final Map<String, Object> earlySingletons = new ConcurrentHashMap<>(16);
 
 
@@ -26,6 +27,16 @@ public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
         synchronized (this.singletons){
             beanNames.add(beanName);
             singletons.put(beanName,singletonObject);
+            earlySingletons.remove(beanName);
+        }
+    }
+
+    @Override
+    public void registerEarlySingleton(String beanName, Object singletonObject) {
+        synchronized (this.earlySingletons){
+            beanNames.add(beanName);
+            earlySingletons.put(beanName,singletonObject);
+            emptySingletons.remove(beanName);
         }
     }
 

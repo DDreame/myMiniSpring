@@ -74,6 +74,10 @@ public abstract class AbstractApplicationContext implements ApplicationContext{
         getBeanFactory().registerSingleton(beanName, singletonObject);
     }
 
+    public void registerEarlySingleton(String beanName, Object singletonObject){
+        getBeanFactory().registerEarlySingleton(beanName, singletonObject);
+    }
+
     @Override
     public String[] getSingletonNames() {
         return getBeanFactory().getSingletonNames();

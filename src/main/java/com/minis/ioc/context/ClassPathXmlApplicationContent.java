@@ -34,6 +34,7 @@ public class ClassPathXmlApplicationContent extends AbstractApplicationContext {
         if (isRefresh) {
             try {
                 refresh();
+                refresh();
             } catch (BeanException e) {
                 throw new RuntimeException(e);
             }

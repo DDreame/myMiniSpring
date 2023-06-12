@@ -38,33 +38,49 @@ public abstract class AbstractFactory extends FactoryBeanRegistrySupport
         if(singleton == null){
             singleton = earlySingletons.get(beanName);
             if(singleton == null){
-                BeanDefinition beanDefinition = beanDefinitions.get(beanName);
-                if(beanDefinition == null){
-                    return null;
+                singleton = emptySingletons.get(beanName);
+                if(singleton == null){
+                    BeanDefinition beanDefinition = beanDefinitions.get(beanName);
+                    if(beanDefinition == null){
+                        return null;
+                    }
+                    try{
+                        singleton = createBean(beanDefinition);
+
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
                 }
-                try{
-                    singleton = createBean(beanDefinition);
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
+                if(singleton instanceof  BeanPostProcessor){
+                    addBeanPostProcessor((BeanPostProcessor) singleton);
+                    ((BeanPostProcessor) singleton).setBeanFactory(this);
                 }
-                this.registerSingleton(beanName,singleton);
+                this.registerEarlySingleton(beanName,singleton);
+                return singleton;
+            }else{
                 // 预留beanpostprocessor位置
                 // step 1: postProcessBeforeInitialization
-                applyBeanPostProcessorsBeforeInitialization(singleton, beanName);
+                singleton = applyBeanPostProcessorsBeforeInitialization(singleton, beanName);
                 // step 2: afterPropertiesSet
                 // step 3: init-method
+                BeanDefinition beanDefinition = beanDefinitions.get(beanName);
                 if (beanDefinition.getInitMethodName() != null && !"".equals(beanDefinition.getInitMethodName())) {
                     invokeInitMethod(beanDefinition, singleton);
                 }
                 // step 4: postProcessAfterInitialization
-                applyBeanPostProcessorsAfterInitialization(singleton, beanName);
+                singleton = applyBeanPostProcessorsAfterInitialization(singleton, beanName);
+
+                this.registerSingleton(beanName,singleton);
             }
+
         }
         if(singleton instanceof FactoryBean){
             return this.getObjectFroBeanInstance(singleton, beanName);
         }
         return singleton;
     }
+
+
 
     protected Object getObjectFroBeanInstance(Object singleton, String beanName) {
         if(!(singleton instanceof  FactoryBean)){
@@ -100,7 +116,7 @@ public abstract class AbstractFactory extends FactoryBeanRegistrySupport
 
         Class<?> clazz = null;
         Object obj = doCreateBean(beanDefinition);
-        earlySingletons.put(beanDefinition.getId(), obj);
+        emptySingletons.put(beanDefinition.getId(), obj);
         Constructor<?> constructor = null;
         try{
             clazz = Class.forName(beanDefinition.getClassName());

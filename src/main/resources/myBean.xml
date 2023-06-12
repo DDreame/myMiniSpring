@@ -25,6 +25,11 @@
         <constructor-arg type="Integer" name="level" value="133"/>
     </bean>
 
+    <bean id="autoProxyCreator" class="com.minis.aop.autoproxy.BeanNameAutoProxyCreator">
+        <property type="string" name="pattern" value="play*"/>
+        <property type="string" name="interceptorName" value="advisor"/>
+    </bean>
+
     <bean id="webBindingInitializer" class="com.minis.test.webTest.DateInitializer">
     </bean>
     <bean id="messageConverter" class="com.minis.web.converter.DefaultHttpMessageConverter">
@@ -99,4 +104,10 @@
         <property type="java.lang.Object" name="target" ref="realAction3"/>
         <property type="String" name="interceptorName" value="beforeAdvisor"/>
     </bean>
+
+
+
+    <bean id="play1" class="com.minis.test.aop.Play1"/>
+    <bean id="play2" class="com.minis.test.aop.Play2"/>
+    <bean id="play3" class="com.minis.test.aop.Play3"/>
 </beans>

@@ -3,6 +3,7 @@ package com.minis.test.service;
 import com.minis.ioc.beans.factory.annotation.Autowired;
 import com.minis.test.aop.IAction;
 import com.minis.test.aop.DynamicProxy;
+import com.minis.test.aop.IPlay;
 import com.minis.web.RequestMapping;
 import com.minis.web.ResponseBody;
 import com.minis.web.servlet.ModelAndView;
@@ -127,6 +128,21 @@ public class HelloWorldBean {
         System.out.println(str);
         action3.doAction();
         action3.doSome();
+    }
+
+    @Autowired
+    IPlay play1;
+    @Autowired
+    IPlay play2;
+    @Autowired
+    IPlay play3;
+    @RequestMapping("/testaop5")
+    public void doTestRealAop5() {
+        String str = "________test aop4, hello world!_______";
+        System.out.println(str);
+        play1.doPlay();
+        play2.doPlay();
+        play3.doPlay();
     }
 
 }

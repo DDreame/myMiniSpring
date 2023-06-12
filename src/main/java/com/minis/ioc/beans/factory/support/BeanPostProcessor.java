@@ -1,5 +1,6 @@
 package com.minis.ioc.beans.factory.support;
 
+import com.minis.ioc.beans.BeanFactory;
 import com.minis.ioc.exception.BeanException;
 
 /***
@@ -26,4 +27,6 @@ public interface BeanPostProcessor {
      * @throws BeanException
      */
     Object postProcessAfterInitialization(Object bean, String beanName) throws BeanException;
+
+    void setBeanFactory(BeanFactory beanFactory);
 }

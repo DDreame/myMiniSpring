@@ -8,6 +8,9 @@ package com.minis.ioc.beans.factory.support;
 public interface SingletonBeanRegistry {
     void registerSingleton(String beanName, Object singletonObject);
 
+
+    void registerEarlySingleton(String beanName, Object singletonObject);
+
     Object getSingleton(String beanName);
 
     boolean containsSingleton(String beanName);

@@ -2,10 +2,6 @@
 
 一个 Spring 核心的实现项目，从 IOC 开始
 
-# 主要来源
-
-[手把手带你写一个 MiniSpring -- 极课时间](https://time.geekbang.org/column/intro/100536701)
-
 # TODO
 
 ## IOC 
@@ -16,6 +12,9 @@
  - [x] 构建工厂体系
  - [x] 实现事件系统
  - [ ] 实现基本类型注入
+ - [ ] @Controller @Service 实现
+ - [ ] 对外隐藏 bean.xml
+ - 
 
 ## MVC
 
@@ -26,6 +25,7 @@
 - [x] 实现返回 Json 数据
 - [x] 实现使用 String 返回 JSP
 - [ ] 实现返回基本类型而非 JSP
+- [ ] 配置指定路径而非完整的注解路径
 
 
 ## JDBC Template
@@ -35,12 +35,16 @@
 - [x] 组合IOC容器
 - [x] 组件化SQL参数注入
 - [x] SQL 返回结果优化
-- [ ] 构建链接池
+- [x] 构建链接池
 
 
 ## AOP
 
-todo...
+- [x] JDK 代理
+- [x] 批量代理
+- [x] 三级缓存
+- [ ] Cglib 代理
+- [ ] 注解代理
 
 # Doc
 
@@ -54,4 +58,8 @@ todo...
  - refactor: 代码重构
  - build: 影响项目构建或依赖修改
  - style: 不影响程序逻辑的代码修改
- - chore: 不属于以上任何类型的其他类型(日常事务
+ - chore: 不属于以上任何类型的其他类型(日常事务)
+
+# 主要来源
+
+[手把手带你写一个 MiniSpring -- 极课时间](https://time.geekbang.org/column/intro/100536701)

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="myMiniSpring:jar" />
       <artifact name="myMiniSpring:war" />
     </artifacts-to-build>
   </component>
@@ -10,11 +9,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feat(minis.jdbc): 优化返回结果，支持列表式返回">
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/AService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/AServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/BaseBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/CustomDateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/CustomDateEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/DynamicProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/IAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/IAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/IPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/IPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/MyAfterAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/MyAfterAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/MyBeforeAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/MyBeforeAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/HelloWorldBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/TracingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/TracingInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/UserJdbcImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/minisMVC-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/minisMVC-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/myBean.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +58,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="jdbc" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -51,25 +82,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32413793&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32413793",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.minis.beans.factory.support" />
@@ -82,17 +119,28 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/minis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/resources/WebContent" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <recent name="$PROJECT_DIR$/src/test/java/resources" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.minis.test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.minis.test.aop" />
       <recent name="com.minis.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
+  <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="myMiniSpring" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SomTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SomTest" />
       <module name="myMiniSpring" />
@@ -118,7 +166,7 @@
       <module name="myMiniSpring" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.minis.test.service.*" />
+          <option name="PATTERN" value="com.minis.test.aop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,22 +257,23 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="myMiniSpring:jar" />
           <artifact name="myMiniSpring:war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SomTest" />
-      <item itemvalue="Application.Task" />
-      <item itemvalue="Application.Test1" />
-      <item itemvalue="Tomcat Server.Tomcat 9" />
+      <item itemvalue="Tomcat 服务器.Tomcat 9" />
+      <item itemvalue="应用程序.Main" />
+      <item itemvalue="应用程序.SomTest" />
+      <item itemvalue="应用程序.Task" />
+      <item itemvalue="应用程序.Test1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SomTest" />
-        <item itemvalue="Application.Task" />
-        <item itemvalue="Application.Test1" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.Test1" />
+        <item itemvalue="应用程序.Task" />
+        <item itemvalue="应用程序.SomTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +303,10 @@
       <workItem from="1681740268664" duration="17661000" />
       <workItem from="1681956811698" duration="17802000" />
       <workItem from="1681996445068" duration="3625000" />
+      <workItem from="1686058968114" duration="15884000" />
+      <workItem from="1686364919060" duration="2142000" />
+      <workItem from="1686473202742" duration="13922000" />
+      <workItem from="1686637768684" duration="8909000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -402,7 +455,84 @@
       <option name="project" value="LOCAL" />
       <updated>1681999067978</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat(minis.jdbc): 新增JDBC链接池(非线程安全)">
+      <created>1685952716925</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685952716925</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat(minis.ioc.core): 增加init-method标签，可以执行初始化方法。">
+      <created>1685956793816</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685956793816</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix(minis.ioc): 修改执行init-method的方法">
+      <created>1685958321917</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685958321917</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fix(minis.jdbc.baits): 增加mapper配置sql语句功能。">
+      <created>1685958350658</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685958350658</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test(minis.test.aop): 增加基础动态代理相关内容测试">
+      <created>1686104484710</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686104484710</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feature(minis.aop): 增加JDK动态代理。将Object托管到FactoryBean中。">
+      <created>1686107862967</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686107862967</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feature(minis.aop): 改造代理类，支持使用注入方式控制方法代理，临时过渡的修改了bean @Autowired注入过程。">
+      <created>1686214238864</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686214238864</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feature(minis.aop): 改造代理类，支持在方法前后分别进行代理，但是目前问题：同时进行前后代理需要额外的配置文件。">
+      <created>1686216822196</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686216822196</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feature(minis.aop): 引入PointCut，支持自定义匹配代理方法，使用&quot;*&quot;。">
+      <created>1686476151605</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686476151605</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feature(minis.ioc): 粗糙不堪的三级缓存，为了增强代理功能。在第二级缓存的时候使用一级缓存得到的增强类。">
+      <created>1686575041981</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1686575041981</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。">
+      <created>1686575079794</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686575079794</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,6 +551,17 @@
                   <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="107" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -428,12 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Spring Learning] Frist commit About DI." />
-    <MESSAGE value="构建 BeanFactory，解藕了类 ClassPathXmlApplicationContent，将Bean管理部分托管到 BeanFactory。解藕 Resource 数据读取部分。" />
-    <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持单例模式，默认单例实现" />
-    <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持注入。&#10;&#10;支持构造器注入和 set 参数注入" />
-    <MESSAGE value="refactor(com.minis.beans):修改 BeanFactory，支持循环依赖注入。&#10;&#10;修改注入方式为两级缓存，使用 earlySingleton 构建初期实例，修改相应  Test 测试循环依赖是否支持。" />
-    <MESSAGE value="feature(com.minis.beans):修改 BeanFactory，支持注解@Atuowired。&#10;&#10;实现 @Autowired 注解" />
     <MESSAGE value="doc(readme):添加 ReadMe 文件。" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增强扩展性" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
@@ -447,7 +582,19 @@
     <MESSAGE value="refactor(minis.jdbc):修改sql参数注入逻辑，抽取为独立组件" />
     <MESSAGE value="doc(README.md): 修改 todolist" />
     <MESSAGE value="feat(minis.jdbc): 优化返回结果，支持列表式返回" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(minis.jdbc): 优化返回结果，支持列表式返回" />
+    <MESSAGE value="feat(minis.jdbc): 新增JDBC链接池(非线程安全)" />
+    <MESSAGE value="feat(minis.ioc.core): 增加init-method标签，可以执行初始化方法。" />
+    <MESSAGE value="fix(minis.ioc): 修改执行init-method的方法" />
+    <MESSAGE value="fix(minis.jdbc.baits): 增加mapper配置sql语句功能。" />
+    <MESSAGE value="test(minis.test.aop): 增加基础aop相关内容测试" />
+    <MESSAGE value="test(minis.test.aop): 增加基础动态代理相关内容测试" />
+    <MESSAGE value="feature(minis.aop): 增加JDK动态代理。将Object托管到FactoryBean中。" />
+    <MESSAGE value="feature(minis.aop): 改造代理类，支持使用注入方式控制方法代理，临时过渡的修改了bean @Autowired注入过程。" />
+    <MESSAGE value="feature(minis.aop): 改造代理类，支持在方法前后分别进行代理，但是目前问题：同时进行前后代理需要额外的配置文件。" />
+    <MESSAGE value="feature(minis.aop): 引入PointCut，支持自定义匹配代理方法，使用&quot;*&quot;。" />
+    <MESSAGE value="feature(minis.ioc): 粗糙不堪的三级缓存，为了增强代理功能。在第二级缓存的时候使用一级缓存得到的增强类。" />
+    <MESSAGE value="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -463,39 +610,9 @@
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinder.java</url>
           <line>39</line>
           <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="118" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/databind/WebDataBinderFactory.java</url>
@@ -503,59 +620,63 @@
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/minis/test/service/UserService.java</url>
+          <line>32</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java</url>
-          <line>67</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/minis/test/service/HelloWorldBean.java</url>
+          <line>73</line>
           <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="185" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/jdbc/baits/DefaultSqlSession.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/DispatcherServlet.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="190" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/jdbc/baits/DefaultSqlSession.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="233" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/servlet/RequestMappingHandlerAdapter.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="192" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/minis/test/service/UserService.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="193" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/aop/JdkDynamicAopProxy.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="246" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="194" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="282" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="195" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/DefaultListableBeanFactory.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="284" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="196" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/beans/factory/support/AbstractFactory.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="197" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/minis/ioc/core/ClassPathXmlResource.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="286" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="199" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action1.java</url>
+          <line>12</line>
+          <properties class="com.minis.test.aop.Action1">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="240" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -563,6 +684,7 @@
       <pinned-members>
         <PinnedItemInfo parentTag="com.minis.ioc.beans.factory.DefaultListableBeanFactory" memberName="parentBeanFactory" />
         <PinnedItemInfo parentTag="com.minis.ioc.beans.factory.DefaultListableBeanFactory" memberName="beanDefinitionNames" />
+        <PinnedItemInfo parentTag="com.minis.jdbc.baits.DefaultSqlSession" memberName="sqlSessionFactory" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>

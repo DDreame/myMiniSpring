@@ -60,11 +60,11 @@ public class DefaultObjectMapper implements ObjectMapper{
         Field[] fields = clz.getDeclaredFields();
         //对返回对象中的每一个属性进行格式转换
         for (Field field : fields) {
-            String sField = "";
-            Object value = null;
-            Class<?> type = null;
+            String sField;
+            Object value;
+            Class<?> type;
             String name = field.getName();
-            String strValue = "";
+            String strValue;
             field.setAccessible(true);
             try {
                 value = field.get(obj);
@@ -72,7 +72,6 @@ public class DefaultObjectMapper implements ObjectMapper{
                 throw new RuntimeException(e);
             }
             type = field.getType();
-
             if (value instanceof Date) {
                 LocalDate localDate = ((Date)value).toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                 strValue = localDate.format(this.datetimeFormatter);

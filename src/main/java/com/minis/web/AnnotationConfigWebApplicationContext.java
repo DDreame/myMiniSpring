@@ -3,12 +3,9 @@ package com.minis.web;
 import com.minis.ioc.beans.factory.DefaultListableBeanFactory;
 import com.minis.ioc.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import com.minis.ioc.beans.factory.config.BeanDefinition;
-import com.minis.ioc.beans.factory.support.AbstractFactory;
 import com.minis.ioc.beans.factory.support.BeanFactoryPostProcessor;
-import com.minis.ioc.beans.factory.support.BeanPostProcessor;
 import com.minis.ioc.beans.factory.support.ConfigurableListableBeanFactory;
 import com.minis.ioc.context.AbstractApplicationContext;
-import com.minis.ioc.context.ClassPathXmlApplicationContent;
 import com.minis.ioc.event.ApplicationEvent;
 import com.minis.ioc.event.ApplicationEventPublisher;
 import com.minis.ioc.event.ApplicationListener;
@@ -18,13 +15,9 @@ import com.minis.utils.MyUtils;
 
 import javax.servlet.ServletContext;
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 
 /***
  * @description : Todo

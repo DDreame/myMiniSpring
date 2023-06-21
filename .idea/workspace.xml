@@ -9,38 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="doc(README): 更新readme。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/AService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/AServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/AServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/BaseBaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseBaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/CustomDateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/CustomDateEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Action3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Action3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/DynamicProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/IAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/IAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/IPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/IPlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/MyAfterAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/MyAfterAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/MyBeforeAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/MyBeforeAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/aop/Play3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/aop/Play3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/jsp/error.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/jsp/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/HelloWorldBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/HelloWorldBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/TracingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/TracingInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserJdbcImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/UserJdbcImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/test/webTest/DateInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/minis/test/webTest/DateInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/minisMVC-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/minisMVC-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/myBean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/myBean.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,31 +54,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "库",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32413793",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32413793&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.minis.beans.factory.support" />
@@ -307,6 +279,8 @@
       <workItem from="1686364919060" duration="2142000" />
       <workItem from="1686473202742" duration="13922000" />
       <workItem from="1686637768684" duration="8909000" />
+      <workItem from="1687242652834" duration="800000" />
+      <workItem from="1687243771475" duration="1381000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -532,7 +506,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686575079794</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="refactor(minis): 调整项目结构，规范文件位置，将测试文件移入Test文件夹内。">
+      <created>1687242974611</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1687242974611</updated>
+    </task>
+    <task id="LOCAL-00034" summary="doc(README): 更新readme。">
+      <created>1687243266707</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1687243266707</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,8 +557,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="doc(readme):添加 ReadMe 文件。" />
-    <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增强扩展性" />
     <MESSAGE value="refactor(minis.bean): 修改 IOC 工厂，增加事件推送" />
     <MESSAGE value="feat(minis.web): 构建 MVC 基本结构，修改输出格式为 war" />
     <MESSAGE value="feat(minis.web): 修改基本结构，构建 @RequestMapping 支持" />
@@ -594,7 +580,9 @@
     <MESSAGE value="feature(minis.aop): 引入PointCut，支持自定义匹配代理方法，使用&quot;*&quot;。" />
     <MESSAGE value="feature(minis.ioc): 粗糙不堪的三级缓存，为了增强代理功能。在第二级缓存的时候使用一级缓存得到的增强类。" />
     <MESSAGE value="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature(minis.aop): 增强aop能力，实现通过ioc自动注入代理相关类。降低配置复杂度。" />
+    <MESSAGE value="refactor(minis): 调整项目结构，规范文件位置，将测试文件移入Test文件夹内。" />
+    <MESSAGE value="doc(README): 更新readme。" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(README): 更新readme。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

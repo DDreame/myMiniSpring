@@ -78,8 +78,10 @@ public class DefaultObjectMapper implements ObjectMapper{
                 strValue = localDate.format(this.datetimeFormatter);
             } else if (value instanceof BigDecimal || value instanceof Double || value instanceof Float){
                 strValue = this.decimalFormatter.format(value);
-            } else {
+            } else if(value != null){
                 strValue = value.toString();
+            }else {
+                strValue = "null";
             }
             //拼接Json串
             if (sJsonStr.toString().equals("{")) {

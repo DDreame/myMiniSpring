@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="myMiniSpring:war" />
+      <artifact name="myMiniSpring:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2109a1e1-73aa-4732-b98f-c6b8b8d5ce23" name="变更" comment="doc(README): 更新readme。">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/myMiniSpring_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myMiniSpring.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/AnnotationConfigWebApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/minis/web/converter/DefaultObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/test.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,31 +59,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32413793&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/xinchen/IdeaProjects/myMiniSpring/target/myMiniSpring-1.0-SNAPSHOT/WEB-INF/classes/WebContent/WEB-INF/jsp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32413793",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.minis.beans.factory.support" />
@@ -91,11 +96,11 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/minis" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/jsp" />
       <recent name="$PROJECT_DIR$/src/test/java/resources" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.minis.test" />
@@ -229,7 +234,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="myMiniSpring:war" />
+          <artifact name="myMiniSpring:jar" />
         </option>
       </method>
     </configuration>
@@ -281,6 +286,8 @@
       <workItem from="1686637768684" duration="8909000" />
       <workItem from="1687242652834" duration="800000" />
       <workItem from="1687243771475" duration="1381000" />
+      <workItem from="1687331229923" duration="280000" />
+      <workItem from="1687332963819" duration="4114000" />
     </task>
     <task id="LOCAL-00001" summary="[Spring Learning] Frist commit About DI.">
       <created>1679809591698</created>
@@ -520,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687243266707</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="doc(README): 更新readme。">
+      <created>1687331293003</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1687331293003</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

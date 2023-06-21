@@ -2,11 +2,7 @@
   <artifact type="exploded-war" name="myMiniSpring:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/myMiniSpring_jar</output-path>
     <root id="root">
-      <element id="module-output" name="myMiniSpring" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-annotations-api/9.0.55/tomcat-annotations-api-9.0.55.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.55/tomcat-embed-core-9.0.55.jar" path-in-jar="/" />
-      <element id="module-test-output" name="myMiniSpring" />
+      <element id="artifact" artifact-name="myMiniSpring:war" />
     </root>
   </artifact>
 </component>
